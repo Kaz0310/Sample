@@ -1,0 +1,7 @@
+name: ssh key generate
+run: |
+  mkdir -p ~/.ssh/
+  echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+  chmod 600 ~/.ssh/id_rsa
+name: Deploy
+run: rsync -ahvz -e "ssh -i ~/.ssh/id_rsa -p 10022 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ./ ${{ secrets.USER_NAME }}@${{ secrets.HOST_NAME }}:/home/altecseng/altecs.jp/public_html/Sample/ --include-from=".github/rsync_include.txt" --exclude-from=".github/rsync_exclude.txt"
