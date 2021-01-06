@@ -7,8 +7,8 @@
 <body>
 
 <p>ユーザーを登録しました</p>
-  <button type="button" onclick="location.href='/user'">ユーザー一覧</button>
+  <button type="button" onclick="location.href='/public/user'">ユーザー一覧</button>
 </br></br>
-  <button type="button" onclick="location.href='/create'">ユーザー作成</button>
+  <button type="button" onclick="location.href='/public/create'">ユーザー作成</button>
 </body>
 </html>

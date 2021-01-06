@@ -23,7 +23,7 @@
             <?php echo $val->name; ?>
           </td>
           <td>
-            <form action="/addcareer" method="post">
+            <form action="/public/addcareer" method="post">
             @csrf
             <div style="margin-left:10%;margin-right:10%;">
               <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
