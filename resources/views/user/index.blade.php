@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-  <button type="button" onclick="location.href='/create'">ユーザー作成</button>
+  <button type="button" onclick="location.href='/public/create'">ユーザー作成</button>
 </br></br>
 <label><?php echo count($data); ?>件</Label>
 <table>
