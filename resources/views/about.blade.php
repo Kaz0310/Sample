@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>aboutページ テスト</h1>
+<div style="text-align: center;">
+    <h1>aboutページ テスト2</h1>
+</div>
 </body>
 </html>
