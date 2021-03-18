@@ -12,29 +12,25 @@
     <h1>aboutページ テスト2</h1>
 </div>
 <div id="app">
-  <toggle-button @change="onChangeEventHandler"></toggle-button>
-  <toggle-button v-model="myDataVariable"></toggle-button>  
-  <toggle-button :value="false"
-                 color="#82C7EB"
-                 height="40"
-                 width="84"
-                 :sync="true"
-                 :labels="true"></toggle-button>
-  <toggle-button :value="true"
-                 :labels="{checked: 'Foo', unchecked: 'Bar'}"></toggle-button>
-</div>
+  <button v-on:click="toggle_switch()">Toggle Button</button>
+  <p v-if="isActive === false">退社
+  </p>
+  <p v-else>出社
+  </p>
+ </div>
 <script>
-var app1 = new Vue({
-   el: '#app',
-   data: {
-    myDataVariable: ''
-   },
-   methods: {
-    onChangeEventHandler: function(){
-      console.log('onChangeEventHandler');
-    }
+ export default {
+  data: function() {
+   return {
+    isActive: false
    }
-})
+  },
+  methods: {
+   toggle_switch: function() {
+    this.isActive = !this.isActive
+   }
+  }
+ }
 </script>
 </body>
 </html>
