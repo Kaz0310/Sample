@@ -10,8 +10,8 @@
 <body>
 <div style="text-align: center;">
     <h2>勤怠状態</h2>
-    <button type="button" onclick="location.href='/public/arrive'">出社</button>
-    <button type="button" onclick="location.href='/public/leave'">退社</button>
+    <button type="button" onclick="location.href='/Sample/public/arrive'">出社</button>
+    <button type="button" onclick="location.href='/Sample/public/leave'">退社</button>
 </div>
 </body>
 </html>
