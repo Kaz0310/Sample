@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
@@ -10,29 +9,9 @@
 </head>
 <body>
 <div style="text-align: center;">
-    <h1>aboutページ テスト2</h1>
+    <h2>勤怠状態</h2>
+    <button type="button" onclick="location.href='/public/arrive'">出社</button>
+    <button type="button" onclick="location.href='/public/leave'">退社</button>
 </div>
-<div id="app">
-  <button v-on:click="toggle_switch()">Toggle Button</button>
-  <p v-if="isActive === false">退社
-  </p>
-  <p v-else>出社
-  </p>
- </div>
-<script>
- export default {
-  data: function() {
-   return {
-    isActive: false
-   }
-  },
-  methods: {
-   toggle_switch: function() {
-    this.isActive = !this.isActive
-   }
-  }
- }
-</script>
-<script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>

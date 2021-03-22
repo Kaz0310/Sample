@@ -19,6 +19,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/arrive', 'ScheduleController@arrive');
+Route::get('/leave', 'ScheduleController@leave');
+
 Route::get('/user', 'UserController@index');
 Route::get('/create', 'UserController@create');
 Route::post('/form', 'UserController@form');
