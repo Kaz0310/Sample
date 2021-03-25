@@ -10,12 +10,14 @@ class ScheduleController extends Controller
 
         DB::table('schedule')->where('user_id', 1)
         ->update(["arrive" => 1]);
-        return view('about');
+        return redirect()->back();
+        // return view('about');
     }
 
     public function leave(){
         DB::table('schedule')->where('user_id', 1)
         ->update(["arrive" => 0]);
-        return view('about');
+        return redirect()->back();
+        // return view('about');
     }
 }
