@@ -8,7 +8,7 @@ class ScheduleController extends Controller
 {
 
     public function about() {
-        $user_data = DB::table('schedule')->where('user_id', 1)->get(['arrive']);
+        $user_data = DB::table('schedule')->where('user_id', 1)->get();
         return view('about',['data' => $user_data]);
     }
 
