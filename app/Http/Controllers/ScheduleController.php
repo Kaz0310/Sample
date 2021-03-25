@@ -6,6 +6,12 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 class ScheduleController extends Controller
 {
+
+    public function about() {
+        $user_data = DB::table('schedule')->where('user_id', 1)->get(['arrive']);
+        return view('about',['data' => $user_data]);
+    }
+
     public function arrive(){
 
         DB::table('schedule')->where('user_id', 1)

@@ -15,10 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
-
+Route::get('/about', 'ScheduleController@about');
 Route::get('/arrive', 'ScheduleController@arrive');
 Route::get('/leave', 'ScheduleController@leave');
 

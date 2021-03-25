@@ -10,8 +10,14 @@
 <body>
 <div style="text-align: center;">
     <h2>勤怠状態</h2>
-    <button type="button" onclick="location.href='/Sample/public/arrive'">出社</button>
+    @if($data)
+    <button type="button" disabled onclick="location.href='/Sample/public/arrive'">出社</button>
     <button type="button" onclick="location.href='/Sample/public/leave'">退社</button>
+    @else
+    <button type="button" onclick="location.href='/Sample/public/arrive'">出社</button>
+    <button type="button" disabled onclick="location.href='/Sample/public/leave'">退社</button>
+    @endif
+    
 </div>
 </body>
 </html>
