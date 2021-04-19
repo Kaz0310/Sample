@@ -109,7 +109,7 @@
       </br>
     <?php } ?>
   </br></br>
-      <button type="button" onclick="location.href='/public/user'">ユーザー一覧</button>
+      <button type="button" onclick="location.href='/Sample/public/user'">ユーザー一覧</button>
 </div>
 
 </body>

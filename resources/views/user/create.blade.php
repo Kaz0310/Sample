@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>社員情報入力</h2>
-<form action="/public/form" method="post">
+<form action="/Sample/public/form" method="post">
 @csrf
 <div>
     <table>

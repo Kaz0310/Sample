@@ -7,7 +7,7 @@
 <body>
 
 <p>経歴を登録しました</p>
-  <button type="button" onclick="location.href='/public/user'">ユーザー一覧</button>
+  <button type="button" onclick="location.href='/Sample/public/user'">ユーザー一覧</button>
 </br>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-  <button type="button" onclick="location.href='/public/create'">ユーザー作成</button>
+  <button type="button" onclick="location.href='/Sample/public/create'">ユーザー作成</button>
 </br></br>
 <label><?php echo count($data); ?>件</Label>
 <table>
@@ -23,7 +23,7 @@
             <?php echo $val->name; ?>
           </td>
           <td>
-            <form action="/public/addcareer" method="post">
+            <form action="/Sample/public/addcareer" method="post">
             @csrf
             <div style="margin-left:10%;margin-right:10%;">
               <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
@@ -32,7 +32,7 @@
             </form>
           </td>
           <td>
-            <form action="/public/show" method="post">
+            <form action="/Sample/public/show" method="post">
             @csrf
             <div style="margin-left:10%;margin-right:10%;">
               <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
