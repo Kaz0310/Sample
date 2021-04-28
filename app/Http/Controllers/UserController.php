@@ -89,6 +89,13 @@ class UserController extends Controller
         return view('user.show',['data' => $user_data],['career' => $career_data]);
     }
 
+    public function job(Request $request)
+    {
+      $data1 = $request::all();
+      $career_data = DB::table('career')->where('number', $data1['number'])->get();
+      return view('user.job',['career' => $career_data]);
+    }
+
     public function career(Request $request)
     {
         $data1 = $request::all();
