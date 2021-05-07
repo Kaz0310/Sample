@@ -13,7 +13,8 @@
     <table>
         <tbody>
             <tr>
-            <th rowspan="2" width="20"></th>
+            <th rowspan="2" width="20px"></th>
+            <th rowspan="2" width="20px">期間</th>
             <th scope="row">案件名</th>
             </tr>
             <tr>
@@ -22,6 +23,7 @@
             <?php foreach($career as $val){ ?>
             <tr>
             <td rowspan="2"></td>
+            <td rowspan="2">yyyy/mm - yyyy/mm</td>
             <td>
             <?php echo $val->matter; ?>
             </td>
