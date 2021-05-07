@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>社員情報入力</title>
-    <link rel="stylesheet" href="{{ asset('css/create_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/job_style.css') }}">
 </head>
 <body>
     <h2>社員情報入力</h2>
@@ -13,8 +13,8 @@
     <table>
         <tbody>
             <tr>
-            <th rowspan="2" width="20px"></th>
-            <th rowspan="2" width="20px">期間</th>
+            <th rowspan="2"></th>
+            <th rowspan="2">期間</th>
             <th scope="row">案件名</th>
             </tr>
             <tr>
@@ -38,7 +38,6 @@
     </table>
 </div>
 
-<button type="submit" id="confirm" name="confirm">経歴登録</button>
 </form>
 </body>
 

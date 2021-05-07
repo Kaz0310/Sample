@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+th {
+    background-color: #cdefff;
+    text-align: left;
+    border: solid 1px;/* 枠線指定 */
+}
+
+th.center {
+    background-color: #cdefff;
+    text-align: center;
+    border: solid 1px;/* 枠線指定 */
+}
+td {
+  margin: auto;
+  border: solid 1px;/* 枠線指定 */
+}
+
+td.center {
+  padding-right: 0px;
+  margin: auto;
+}
