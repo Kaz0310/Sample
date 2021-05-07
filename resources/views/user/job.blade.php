@@ -10,6 +10,7 @@
 <form action="/Sample/public/entry" method="post">
 @csrf
 <div>
+<?php echo $career; ?>
     <table>
         <tbody>
             <tr>
@@ -23,7 +24,7 @@
             <tr>
                 <td rowspan="4"></td>
                 <td>
-                <?php echo $val->matter; ?>
+                <?php echo $val->detail; ?>
                 </td>
                 <td rowspan="3">
                 <?php echo $val->detail; ?>
