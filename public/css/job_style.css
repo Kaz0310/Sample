@@ -3,12 +3,14 @@
 th {
     background-color: #362D79;
     text-align: left;
+    color: white;
     border: solid 1px;/* 枠線指定 */
 }
 
 th.center {
     background-color: #362D79;
     text-align: center;
+    color: white;
     border: solid 1px;/* 枠線指定 */
 }
 td {
