@@ -21,8 +21,11 @@
             </tr>
             <?php foreach($career as $val){ ?>
             <tr>
-                <td></td>
+                <td rowspan="4"></td>
                 <td>
+                <?php echo $val->matter; ?>
+                </td>
+                <td rowspan="3">
                 <?php echo $val->detail; ?>
                 </td>
             </tr>
