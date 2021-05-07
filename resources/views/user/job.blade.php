@@ -10,10 +10,20 @@
 <form action="/Sample/public/entry" method="post">
 @csrf
 <div>
-    <?php foreach($career as $val){ ?>
-      <?php echo $val->detail; ?>
-      </br>
-    <?php } ?>
+    <table>
+        <tbody>
+            <tr>
+            <th scope="row">案件名</th>
+            </tr>
+            <?php foreach($career as $val){ ?>
+            <tr>
+                <td>
+                <?php echo $val->detail; ?>
+                </td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 </div>
 
 <button type="submit" id="confirm" name="confirm">経歴登録</button>
