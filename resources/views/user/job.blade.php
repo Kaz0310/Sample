@@ -13,10 +13,12 @@
     <table>
         <tbody>
             <tr>
+            <th width="60"></th>
             <th scope="row">案件名</th>
             </tr>
             <?php foreach($career as $val){ ?>
             <tr>
+                <td></td>
                 <td>
                 <?php echo $val->detail; ?>
                 </td>
