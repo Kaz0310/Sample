@@ -13,8 +13,11 @@
     <table>
         <tbody>
             <tr>
-            <th width="60"></th>
+            <th rowspan="2" width="20"></th>
             <th scope="row">案件名</th>
+            </tr>
+            <tr>
+            <th scope="row">業務内容</th>
             </tr>
             <?php foreach($career as $val){ ?>
             <tr>
