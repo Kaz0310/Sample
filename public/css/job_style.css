@@ -1,13 +1,13 @@
 @charset "utf-8";
 
 th {
-    background-color: #cdefff;
+    background-color: #362D79;
     text-align: left;
     border: solid 1px;/* 枠線指定 */
 }
 
 th.center {
-    background-color: #cdefff;
+    background-color: #362D79;
     text-align: center;
     border: solid 1px;/* 枠線指定 */
 }
