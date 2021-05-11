@@ -16,14 +16,12 @@
             <th class="center" rowspan="2" width="50"></th>
             <th class="center" rowspan="2" width="50">期間</th>
             <th class="center" scope="row" width="300">案件名</th>
-            </tr>
-            <tr>
-            <th class="center" scope="row" width="300">業務内容</th>
-            </tr>
-            <tr>
             <th class="center" rowspan="2" width="70">系統・規模　役割</th>
             <th class="center" rowspan="2" width="100">担当工程</th>
             <th class="center" rowspan="2" width="100">使用ツール等</th>
+            </tr>
+            <tr>
+            <th class="center" scope="row" width="300">業務内容</th>
             </tr>
             <?php foreach($career as $val){ ?>
             <tr rowspan="4">
