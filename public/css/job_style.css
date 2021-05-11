@@ -14,11 +14,24 @@ th.center {
     border: solid 1px;/* 枠線指定 */
 }
 td {
-  margin: auto;
-  border: solid 1px;/* 枠線指定 */
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
 }
 
 td.center {
-  padding-right: 0px;
-  margin: auto;
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+    text-align: center;
+}
+
+td.left {
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+    text-align: left;
+}
+
+td.right {
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+    text-align: right;
 }
