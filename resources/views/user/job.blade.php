@@ -20,18 +20,31 @@
             <tr>
             <th class="center" scope="row" width="300">業務内容</th>
             </tr>
+            <th class="center" rowspan="2" width="70">系統・規模　役割</th>
+            <th class="center" rowspan="2" width="100">担当工程</th>
+            <th class="center" rowspan="2" width="100">使用ツール等</th>
             <?php foreach($career as $val){ ?>
-            <tr>
-            <td rowspan="2"></td>
-            <td rowspan="2">yyyy/mm - yyyy/mm</td>
-            <td>
-            <?php echo $val->matter; ?>
-            </td>
+            <tr rowspan="4">
+                <td rowspan="4"></td>
+                <td rowspan="4">yyyy/mm - yyyy/mm</td>
+                <td><?php echo $val->matter; ?></td>
             </tr>
-            <tr>
-            <td>
-            <?php echo $val->detail; ?>
-            </td>
+            <tr rowspan="3">
+                <td rowspan="3"><?php echo $val->detail; ?></td>
+            </tr>
+            <tr colspan="2" width="70">
+                <td colspan="2">開発系</td>
+            </tr>
+            <tr colspan="2" width="70">
+                <td colspan="1">人月</td>
+                <td colspan="1">１</td>
+            </tr>
+            <tr colspan="2" width="70">
+                <td colspan="1">メンバ数</td>
+                <td colspan="1">１</td>
+            </tr>
+            <tr colspan="2" width="70">
+                <td colspan="2">リーダー</td>
             </tr>
             <?php } ?>
         </tbody>
