@@ -29,16 +29,23 @@
                 <td rowspan="4">yyyy/mm - yyyy/mm</td>
                 <td><?php echo $val->matter; ?></td>
                 <td colspan="2">開発系</td>
-                <td colspan="1" width="40">人月</td>
-                <td colspan="1">１</td>
-                <td colspan="1" width="40">メンバ数</td>
-                <td colspan="1">１</td>
-                <td colspan="2">リーダー</td>
                 <td rowspan="4"></td>
                 <td rowspan="4"></td>
             </tr>
             <tr rowspan="3">
                 <td rowspan="3"><?php echo $val->detail; ?></td>
+                <td colspan="1" width="40">人月</td>
+                <td colspan="1">１</td>
+                <td colspan="1" width="40">メンバ数</td>
+                <td colspan="1">１</td>
+                <td colspan="2">リーダー</td>
+            </tr>
+            <tr>
+                <td colspan="1" width="40">メンバ数</td>
+                <td colspan="1">１</td>
+            </tr>
+            <tr>
+                <td colspan="2">リーダー</td>
             </tr>
             <?php } ?>
         </tbody>
