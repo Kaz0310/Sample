@@ -20,9 +20,11 @@
             <tr>
             <th class="center" scope="row" width="300">業務内容</th>
             </tr>
+            <tr>
             <th class="center" rowspan="2" width="70">系統・規模　役割</th>
             <th class="center" rowspan="2" width="100">担当工程</th>
             <th class="center" rowspan="2" width="100">使用ツール等</th>
+            </tr>
             <?php foreach($career as $val){ ?>
             <tr rowspan="4">
                 <td rowspan="4"></td>
@@ -45,6 +47,12 @@
             </tr>
             <tr colspan="2" width="70">
                 <td colspan="2">リーダー</td>
+            </tr>
+            <tr rowspan="4">
+                <td rowspan="4"></td>
+            </tr>
+            <tr rowspan="4">
+                <td rowspan="4"></td>
             </tr>
             <?php } ?>
         </tbody>
