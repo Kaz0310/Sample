@@ -16,9 +16,9 @@
             <th class="center" rowspan="2" width="50"></th>
             <th class="center" rowspan="2" width="50">期間</th>
             <th class="center" scope="row" width="300">案件名</th>
-            <th class="center" rowspan="2" colspan="2" width="80">系統・規模　役割</th>
-            <th class="center" rowspan="2" width="100">担当工程</th>
-            <th class="center" rowspan="2" width="100">使用ツール等</th>
+            <th class="center" rowspan="2" colspan="3" width="60">系統・規模　役割</th>
+            <th class="center" rowspan="2" width="150">担当工程</th>
+            <th class="center" rowspan="2" width="150">使用ツール等</th>
             </tr>
             <tr>
             <th class="center" scope="row" width="300">業務内容</th>
@@ -28,21 +28,21 @@
                 <td rowspan="4"></td>
                 <td rowspan="4">yyyy/mm - yyyy/mm</td>
                 <td><?php echo $val->matter; ?></td>
-                <td colspan="2">開発系</td>
+                <td colspan="3">開発系</td>
                 <td rowspan="4"></td>
                 <td rowspan="4"></td>
             </tr>
             <tr rowspan="3">
                 <td rowspan="3"><?php echo $val->detail; ?></td>
-                <td colspan="1" width="60">人月</td>
+                <td colspan="2">人月</td>
                 <td colspan="1">１</td>
             </tr>
             <tr>
-                <td colspan="1" width="60">メンバ数</td>
+                <td colspan="2">メンバ数</td>
                 <td colspan="1">１</td>
             </tr>
             <tr>
-                <td colspan="2">リーダー</td>
+                <td colspan="3">リーダー</td>
             </tr>
             <?php } ?>
         </tbody>
