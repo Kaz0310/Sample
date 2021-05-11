@@ -16,7 +16,7 @@
             <th class="center" rowspan="2" width="50"></th>
             <th class="center" rowspan="2" width="50">期間</th>
             <th class="center" scope="row" width="300">案件名</th>
-            <th class="center" rowspan="2" colspan="3" width="60">系統・規模　役割</th>
+            <th class="center" rowspan="2" colspan="3" width="60">系統・規模<br>役割</th>
             <th class="center" rowspan="2" width="150">担当工程</th>
             <th class="center" rowspan="2" width="150">使用ツール等</th>
             </tr>
