@@ -26,23 +26,23 @@
             <?php foreach($career as $val){ ?>
             <tr rowspan="4">
                 <td rowspan="4"></td>
-                <td rowspan="4">yyyy/mm - yyyy/mm</td>
+                <td rowspan="4"><?php echo $val->start; ?><br> | <br><?php echo $val->end; ?></td>
                 <td><?php echo $val->matter; ?></td>
-                <td class="center" colspan="3">開発系</td>
+                <td class="center" colspan="3"><?php echo $val->type; ?></td>
                 <td rowspan="4"></td>
                 <td rowspan="4"></td>
             </tr>
             <tr rowspan="3">
                 <td class="left" rowspan="3"><?php echo $val->detail; ?></td>
                 <td class="right" colspan="2">人月</td>
-                <td class="right" colspan="1">１</td>
+                <td class="right" colspan="1"><?php echo $val->manpower; ?></td>
             </tr>
             <tr>
                 <td class="right" colspan="2">メンバ数</td>
-                <td class="right" colspan="1">１</td>
+                <td class="right" colspan="1"><?php echo $val->persons; ?></td>
             </tr>
             <tr>
-                <td class="center" colspan="3">リーダー</td>
+                <td class="center" colspan="3"><?php echo $val->role; ?></td>
             </tr>
             <?php } ?>
         </tbody>
