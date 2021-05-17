@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>社員情報入力</title>
+    <title>アルテクス スキルシート</title>
     <link rel="stylesheet" href="{{ asset('css/job_style.css') }}">
 </head>
 <body>
-    <h2>社員情報入力</h2>
+    <h2>職務</h2>
 <form action="/Sample/public/entry" method="post">
 @csrf
 <div>

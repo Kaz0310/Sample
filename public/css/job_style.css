@@ -9,6 +9,7 @@ th {
     text-align: left;
     color: white;
     border: solid 1px;/* 枠線指定 */
+    border-color: black;
 }
 
 th.center {
@@ -16,6 +17,7 @@ th.center {
     text-align: center;
     color: white;
     border: solid 1px;/* 枠線指定 */
+    border-color: black;
 }
 td {
     margin: auto;
