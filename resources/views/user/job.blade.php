@@ -30,7 +30,7 @@
                 <td><?php echo $val->matter; ?></td>
                 <td class="center" colspan="3"><?php echo $val->type; ?></td>
                 <td rowspan="4"></td>
-                <td rowspan="4"><?php echo $val->tools; ?></td>
+                <td rowspan="4"><?php echo l2br(htmlspecialchars($val->tools, ENT_QUOTES, 'UTF-8')); ?></td>
             </tr>
             <tr rowspan="3">
                 <td class="left" rowspan="3"><?php echo $val->detail; ?></td>
