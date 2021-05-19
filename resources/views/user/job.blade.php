@@ -13,15 +13,15 @@
     <table>
         <tbody>
             <tr>
-            <th class="center" rowspan="2" width="50"></th>
-            <th class="center" rowspan="2" width="50">期間</th>
-            <th class="center" scope="row" width="300">案件名</th>
+            <th class="center" rowspan="2" width="60"></th>
+            <th class="center" rowspan="2" width="60">期間</th>
+            <th class="center" scope="row" width="400">案件名</th>
             <th class="center" rowspan="2" colspan="3" width="100">系統・規模<br>役割</th>
-            <th class="center" rowspan="2" width="150">担当工程</th>
-            <th class="center" rowspan="2" width="150">使用ツール等</th>
+            <th class="center" rowspan="2" width="180">担当工程</th>
+            <th class="center" rowspan="2" width="180">使用ツール等</th>
             </tr>
             <tr>
-            <th class="center" scope="row" width="300">業務内容</th>
+            <th class="center" scope="row" width="400">業務内容</th>
             </tr>
             <?php foreach($career as $val){ ?>
             <tr rowspan="4">
