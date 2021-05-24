@@ -35,11 +35,11 @@
             <tr rowspan="3">
                 <td class="left" rowspan="3"><?php echo $val->detail; ?></td>
                 <td class="right" colspan="2">人月</td>
-                <td class="right" colspan="1"><?php echo $val->manpower; ?></td>
+                <td class="right" colspan="1" width="30"><?php echo $val->manpower; ?></td>
             </tr>
             <tr>
                 <td class="right" colspan="2">メンバ数</td>
-                <td class="right" colspan="1"><?php echo $val->persons; ?></td>
+                <td class="right" colspan="1" width="30"><?php echo $val->persons; ?></td>
             </tr>
             <tr>
                 <td class="center" colspan="3"><?php echo $val->role; ?></td>
