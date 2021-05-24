@@ -16,7 +16,7 @@
             <th class="center" rowspan="2" width="60"></th>
             <th class="center" rowspan="2" width="60">期間</th>
             <th class="center" scope="row" width="400">案件名</th>
-            <th class="center" rowspan="2" colspan="3" width="100">系統・規模<br>役割</th>
+            <th class="center" rowspan="2" colspan="2" width="100">系統・規模<br>役割</th>
             <th class="center" rowspan="2" width="180">担当工程</th>
             <th class="center" rowspan="2" width="180">使用ツール等</th>
             </tr>
@@ -28,21 +28,21 @@
                 <td rowspan="4"></td>
                 <td rowspan="4"><?php echo $val->start; ?><br> | <br><?php echo $val->end; ?></td>
                 <td><?php echo $val->matter; ?></td>
-                <td class="center" colspan="3"><?php echo $val->type; ?></td>
+                <td class="center" colspan="2"><?php echo $val->type; ?></td>
                 <td rowspan="4"><?php echo nl2br(htmlspecialchars($val->process, ENT_QUOTES, 'UTF-8')); ?></td>
                 <td rowspan="4"><?php echo nl2br(htmlspecialchars($val->tools, ENT_QUOTES, 'UTF-8')); ?></td>
             </tr>
             <tr rowspan="3">
                 <td class="left" rowspan="3"><?php echo $val->detail; ?></td>
-                <td class="right" colspan="2">人月</td>
+                <td class="right" colspan="1">人月</td>
                 <td class="right" colspan="1" width="30"><?php echo $val->manpower; ?></td>
             </tr>
             <tr>
-                <td class="right" colspan="2">メンバ数</td>
+                <td class="right" colspan="1">メンバ数</td>
                 <td class="right" colspan="1" width="30"><?php echo $val->persons; ?></td>
             </tr>
             <tr>
-                <td class="center" colspan="3"><?php echo $val->role; ?></td>
+                <td class="center" colspan="2"><?php echo $val->role; ?></td>
             </tr>
             <?php } ?>
         </tbody>
