@@ -29,7 +29,7 @@
                 <td rowspan="4"><?php echo $val->start; ?><br> | <br><?php echo $val->end; ?></td>
                 <td><?php echo $val->matter; ?></td>
                 <td class="center" colspan="3"><?php echo $val->type; ?></td>
-                <td rowspan="4"><?php echo nl2br(htmlspecialchars($val->process, ENT_QUOTES, 'UTF-8')); ?></td>
+                <td rowspan="4"><?php echo $val->process; ?></td>
                 <td rowspan="4"><?php echo nl2br(htmlspecialchars($val->tools, ENT_QUOTES, 'UTF-8')); ?></td>
             </tr>
             <tr rowspan="3">
