@@ -24,7 +24,7 @@
             <th class="center" scope="row" width="400">業務内容</th>
             </tr>
             <?php foreach($career as $val){ ?>
-            <tr rowspan="4">
+            <tr class="top" rowspan="4">
                 <td rowspan="4"></td>
                 <td rowspan="4"><?php echo $val->start; ?><br> | <br><?php echo $val->end; ?></td>
                 <td><?php echo $val->matter; ?></td>
@@ -41,7 +41,7 @@
                 <td class="right" colspan="2">メンバ数</td>
                 <td class="right" colspan="1" width="30"><?php echo $val->persons; ?></td>
             </tr>
-            <tr>
+            <tr class="bottom">
                 <td class="center" colspan="3"><?php echo $val->role; ?></td>
             </tr>
             <?php } ?>

@@ -4,6 +4,14 @@ table {
     border-collapse:  collapse;     /* セルの線を重ねる */
 }
 
+tr.top{
+    border-top: separate;
+}
+
+tr.bottom{
+    border-bottom: separate;
+}
+
 th {
     background-color: #362D79;
     text-align: left;
