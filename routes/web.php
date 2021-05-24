@@ -24,7 +24,7 @@ Route::get('/create', 'UserController@create');
 Route::post('/form', 'UserController@form');
 Route::post('/show', 'UserController@show');
 Route::post('/job', 'UserController@job');
-Route::post('/addcareer', 'UserController@career');
+Route::post('/career', 'UserController@career');
 Route::post('/entry', 'UserController@entry');
 
 Route::get('/sample','SampleController@index');
