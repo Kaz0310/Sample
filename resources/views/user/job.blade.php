@@ -10,7 +10,7 @@
     <form action="/Sample/public/career" method="post">
     @csrf
        <input type="hidden" name="number" id="number_id" value="<?php echo $data1['number']; ?>" />
-       <button style="width:50px;" type="submit" id="career" name="career">✚追加</button>
+       <button style="width:60px;" type="submit" id="career" name="career">✚追加</button>
     </form>
 <form action="/Sample/public/entry" method="post">
 @csrf
