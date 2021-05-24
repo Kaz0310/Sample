@@ -7,6 +7,11 @@
 </head>
 <body>
     <h2>職務</h2>
+    <form action="/Sample/public/career" method="post">
+    @csrf
+       <input type="hidden" name="number" id="number_id" value="<?php echo $data->number; ?>" />
+       <button style="width:50px;" type="submit" id="career" name="career">✚追加</button>
+    </form>
 <form action="/Sample/public/entry" method="post">
 @csrf
 <div>
