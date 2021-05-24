@@ -5,11 +5,7 @@ table {
 }
 
 tr.top{
-    border-top: separate;
-}
-
-tr.bottom{
-    border-bottom: separate;
+    border-top-style: double;
 }
 
 th {

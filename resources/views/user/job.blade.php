@@ -41,7 +41,7 @@
                 <td class="right" colspan="2">メンバ数</td>
                 <td class="right" colspan="1" width="30"><?php echo $val->persons; ?></td>
             </tr>
-            <tr class="bottom">
+            <tr>
                 <td class="center" colspan="3"><?php echo $val->role; ?></td>
             </tr>
             <?php } ?>
