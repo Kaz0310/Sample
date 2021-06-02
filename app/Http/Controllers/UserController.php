@@ -105,8 +105,71 @@ class UserController extends Controller
     public function entry(Request $request)
     {
         $data1 = $request::all();
+        $number = $data1['number'];
+        
+
+        $start = null;
+        if(!$start){
+          $start = '2019/01';
+        }
+
+        $end = null;
+        if(!$end){
+          $end = '2019/02';
+        }
+
+        $matter = null;
+        if(!$matter){
+          $matter = '案件';
+        }
+
+        $detail = $data1['detail'];
+        if(!$detail){
+          $detail = '経歴サンプル';
+        }
+
+        $type = null;
+        if(!$type){
+          $type = '開発系';
+        }
+
+        $manpower = null;
+        if(!$manpower){
+          $manpower = 1;
+        }
+
+        $persons = null;
+        if(!$persons){
+          $persons = 1;
+        }
+
+        $role = null;
+        if(!$role){
+          $role = 'リーダー';
+        }
+
+        $process = null;
+        if(!$process){
+          $process = 'ソフトウェア設計
+          ソフトウェア作成
+          システムテスト
+          運用テスト
+          運用・保守';
+        }
+
+        $tools = null;
+        if(!$tools){
+          $tools = 'OS
+          - WindowsOS
+          プログラミング言語
+          - C#
+          - SQL';
+        }
+        
         DB::table('career')
-        ->insert(["number" => $data1['number'], "detail" => $data1['detail']]);
+        ->insert(["number" => $number, "start" => $start, "end" => $end, "matter" => $matter,
+         "detail" => $detail, "type" => $type, "manpower" => $manpower, "persons" => $persons,
+         "role" => $role, "process" => $process, "tools" => $tools]);
         return view('user.entry',compact('data1'));
     }
 }
