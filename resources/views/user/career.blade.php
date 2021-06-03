@@ -20,7 +20,6 @@
             </tr>
         </tbody>
     </table>
-    </br>
     <table>
         <tbody>
             <tr>
@@ -33,7 +32,6 @@
             </tr>
         </tbody>
     </table>
-    </br>
     <table>
         <tbody>
             <tr>
@@ -42,7 +40,6 @@
             </tr>
         </tbody>
     </table>
-    </br>
     <table>
         <tbody>
             <tr>
@@ -51,7 +48,6 @@
             </tr>
         </tbody>
     </table>
-    </br>
 </div>
 
 <button type="submit" id="confirm" name="confirm">経歴登録</button>
