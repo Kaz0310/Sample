@@ -18,21 +18,33 @@
                   <input type="hidden" name="number" id="number_id" value="<?php echo $data1['number']; ?>" />
                 </td>
             </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
             <tr>
                 <th scope="row">期間</th>
                 <td class="center">
-                <input size="10" type="text" id="start" name="start">
+                <input size="15" type="text" id="start" name="start">
                 ―
-                <input size="10" type="text" id="end" name="end">
+                <input size="15" type="text" id="end" name="end">
                 </td>
             </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
             <tr>
                 <th scope="row">案件名</th>
-                <td colspan="3"><input size="40" type="text" id="matter" name="matter"></td>
+                <td><input size="40" type="text" id="matter" name="matter"></td>
             </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
             <tr>
                 <th scope="row">業務内容</th>
-                <td colspan="3"><input size="40" type="text" id="detail" name="detail"></td>
+                <td><textarea id="detail" name="detail"></textarea></td>
             </tr>
         </tbody>
     </table>
