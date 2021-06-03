@@ -20,9 +20,11 @@
             </tr>
             <tr>
                 <th scope="row">期間</th>
-                <td><input size="10" type="text" id="start" name="start"></td>
-                <td>―</td>
-                <td><input size="10" type="text" id="end" name="end"></td>
+                <td class="center">
+                <input size="10" type="text" id="start" name="start">
+                ―
+                <input size="10" type="text" id="end" name="end">
+                </td>
             </tr>
             <tr>
                 <th scope="row">案件名</th>
