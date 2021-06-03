@@ -26,11 +26,11 @@
             </tr>
             <tr>
                 <th scope="row">案件名</th>
-                <td rowspan="3"><input size="40" type="text" id="matter" name="matter"></td>
+                <td colspan="3"><input size="40" type="text" id="matter" name="matter"></td>
             </tr>
             <tr>
                 <th scope="row">業務内容</th>
-                <td rowspan="3"><input size="40" type="text" id="detail" name="detail"></td>
+                <td colspan="3"><input size="40" type="text" id="detail" name="detail"></td>
             </tr>
         </tbody>
     </table>
