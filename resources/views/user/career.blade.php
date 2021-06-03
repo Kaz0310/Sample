@@ -21,16 +21,16 @@
             <tr>
                 <th scope="row">期間</th>
                 <td><input size="10" type="text" id="start" name="start"></td>
-                ―
+                <td>―</td>
                 <td><input size="10" type="text" id="end" name="end"></td>
             </tr>
             <tr>
                 <th scope="row">案件名</th>
-                <td><input size="40" type="text" id="matter" name="matter"></td>
+                <td rowspan="3"><input size="40" type="text" id="matter" name="matter"></td>
             </tr>
             <tr>
                 <th scope="row">業務内容</th>
-                <td><input size="40" type="text" id="detail" name="detail"></td>
+                <td rowspan="3"><input size="40" type="text" id="detail" name="detail"></td>
             </tr>
         </tbody>
     </table>
