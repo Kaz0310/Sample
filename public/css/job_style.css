@@ -47,3 +47,7 @@ td.right {
     border: solid 1px;/* 枠線指定 */
     text-align: right;
 }
+
+textarea {
+    resize: none;
+}

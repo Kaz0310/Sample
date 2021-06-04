@@ -36,7 +36,7 @@
         <tbody>
             <tr>
                 <th class="center" scope="row" width="120">案件名</th>
-                <td><input size="40" type="text" id="matter" name="matter"></td>
+                <td><input size="80" type="text" id="matter" name="matter"></td>
             </tr>
         </tbody>
     </table>
@@ -44,7 +44,25 @@
         <tbody>
             <tr>
                 <th class="center" scope="row" width="120">業務内容</th>
-                <td><textarea id="detail" name="detail"></textarea></td>
+                <td><textarea id="detail" name="detail" style="margin: 0px; width: 543px; height: 200px;"></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <th class="center" scope="row" width="120">系統</th>
+                <td><input size="30" type="text" id="type" name="type"></td>
+
+                <th class="center" scope="row" width="120">役割</th>
+                <td><input size="30" type="text" id="role" name="role"></td>
+            </tr>
+            <tr>
+                <th class="center" scope="row" width="120">規模</th>
+                <td><input size="30" type="text" id="manpower" name="manpower"></td>
+
+                <th class="center" scope="row" width="120">人数</th>
+                <td><input size="30" type="text" id="persons" name="persons"></td>
             </tr>
         </tbody>
     </table>
