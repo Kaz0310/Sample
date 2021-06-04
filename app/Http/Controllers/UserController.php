@@ -148,7 +148,7 @@ class UserController extends Controller
           $role = 'リーダー';
         }
 
-        $process = null;
+        $process = $data1['process'];
         if(!$process){
           $process = 'ソフトウェア設計
           ソフトウェア作成
@@ -157,7 +157,7 @@ class UserController extends Controller
           運用・保守';
         }
 
-        $tools = null;
+        $tools = $data1['tools'];
         if(!$tools){
           $tools = 'OS
           - WindowsOS
