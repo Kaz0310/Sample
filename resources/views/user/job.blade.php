@@ -38,7 +38,7 @@
                 <td rowspan="4"><?php echo nl2br(htmlspecialchars($val->tools, ENT_QUOTES, 'UTF-8')); ?></td>
             </tr>
             <tr rowspan="3">
-                <td class="left" rowspan="3"><?php echo $val->detail; ?></td>
+                <td class="left" rowspan="3"><?php echo nl2br(htmlspecialchars($val->detail, ENT_QUOTES, 'UTF-8')); ?></td>
                 <td class="right" colspan="1">人月</td>
                 <td class="right" colspan="1" width="30"><?php echo $val->manpower; ?></td>
             </tr>

@@ -10,16 +10,7 @@
 <form action="/Sample/public/entry" method="post">
 @csrf
 <div>
-    <table>
-        <tbody>
-            <tr>
-                <th class="center" scope="row" width="120">社員番号</th>
-                <td><?php echo $data1['number']; ?>
-                  <input type="hidden" name="number" id="number_id" value="<?php echo $data1['number']; ?>" />
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<input type="hidden" name="number" id="number_id" value="<?php echo $data1['number']; ?>" />
     <table>
         <tbody>
             <tr>
