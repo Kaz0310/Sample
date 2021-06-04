@@ -52,17 +52,28 @@
         <tbody>
             <tr>
                 <th class="center" scope="row" width="120">系統</th>
-                <td><input size="30" type="text" id="type" name="type"></td>
+                <td><input size="12" type="text" id="type" name="type"></td>
 
                 <th class="center" scope="row" width="120">役割</th>
-                <td><input size="30" type="text" id="role" name="role"></td>
+                <td><input size="12" type="text" id="role" name="role"></td>
             </tr>
             <tr>
                 <th class="center" scope="row" width="120">規模</th>
-                <td><input size="30" type="text" id="manpower" name="manpower"></td>
+                <td><input size="12" type="text" id="manpower" name="manpower"></td>
 
                 <th class="center" scope="row" width="120">人数</th>
-                <td><input size="30" type="text" id="persons" name="persons"></td>
+                <td><input size="12" type="text" id="persons" name="persons"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <th class="center" scope="row" width="120">担当工程</th>
+                <td><textarea id="detail" name="detail" style="margin: 0px; width: 230px; height: 300px;"></textarea></td>
+
+                <th class="center" scope="row" width="120">使用ツール等</th>
+                <td><textarea id="detail" name="detail" style="margin: 0px; width: 300px; height: 300px;"></textarea></td>
             </tr>
         </tbody>
     </table>

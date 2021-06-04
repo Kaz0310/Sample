@@ -108,17 +108,17 @@ class UserController extends Controller
         $number = $data1['number'];
         
 
-        $start = null;
+        $start = $data1['start'];;
         if(!$start){
           $start = '2019/01';
         }
 
-        $end = null;
+        $end = $data1['end'];;
         if(!$end){
           $end = '2019/02';
         }
 
-        $matter = null;
+        $matter = $data1['matter'];;
         if(!$matter){
           $matter = '案件';
         }
@@ -128,22 +128,22 @@ class UserController extends Controller
           $detail = '経歴サンプル';
         }
 
-        $type = null;
+        $type = $data1['type'];;
         if(!$type){
           $type = '開発系';
         }
 
-        $manpower = null;
+        $manpower = $data1['manpower'];;
         if(!$manpower){
           $manpower = 1;
         }
 
-        $persons = null;
+        $persons = $data1['persons'];;
         if(!$persons){
           $persons = 1;
         }
 
-        $role = null;
+        $role = $data1['role'];;
         if(!$role){
           $role = 'リーダー';
         }
