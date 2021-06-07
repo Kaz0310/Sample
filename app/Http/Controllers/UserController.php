@@ -159,11 +159,7 @@ class UserController extends Controller
 
         $tools = $data1['tools'];
         if(!$tools){
-          $tools = 'OS
-          - WindowsOS
-          プログラミング言語
-          - C#
-          - SQL';
+          $tools = 'OS'+ CHAR(13) + CHAR(10) +'- WindowsOS' + CHAR(13) + CHAR(10) + 'プログラミング言語' + CHAR(13) + CHAR(10) + '- C#' + CHAR(13) + CHAR(10) + '- SQL';
         }
         
         DB::table('career')
