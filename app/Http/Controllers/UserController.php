@@ -150,11 +150,7 @@ class UserController extends Controller
 
         $process = $data1['process'];
         if(!$process){
-          $process = 'ソフトウェア設計
-          ソフトウェア作成
-          システムテスト
-          運用テスト
-          運用・保守';
+          $process = "ソフトウェア設計\nソフトウェア作成\nシステムテスト\n運用テスト\n運用・保守";
         }
 
         $tools = $data1['tools'];
