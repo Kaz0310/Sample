@@ -61,10 +61,10 @@
         <tbody>
             <tr>
                 <th class="center" scope="row" width="120">担当工程</th>
-                <td><textarea id="detail" name="detail" style="margin: 0px; width: 230px; height: 300px;"></textarea></td>
+                <td><textarea id="process" name="process" style="margin: 0px; width: 230px; height: 300px;"></textarea></td>
 
                 <th class="center" scope="row" width="120">使用ツール等</th>
-                <td><textarea id="detail" name="detail" style="margin: 0px; width: 300px; height: 300px;"></textarea></td>
+                <td><textarea id="tools" name="tools" style="margin: 0px; width: 300px; height: 300px;"></textarea></td>
             </tr>
         </tbody>
     </table>
