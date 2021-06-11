@@ -8,16 +8,14 @@
 <body>
     <h2>アルテクススキルシート</h2>
     <div>
-    <?php foreach($data as $val){ ?>
     <table>
         <tbody>
             <tr>
             <th class="left" scope="row" width="120">社員番号</th>
-            <td class="left"><?php echo $val->number; ?></td>
+            <td class="left"><?php echo $data1['number']; ?></td>
             </tr>
         </tbody>
     </table>
-    <?php } ?>
     </div>
     <h3>職務</h3>
     <form action="/Sample/public/career" method="post">

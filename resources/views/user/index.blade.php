@@ -12,7 +12,7 @@
 <label><?php echo count($data); ?>件</Label>
 <table>
   <?php if(count($data) > 0){ ?>
-  <tr><th class="center">ID</th><th class="center">NAME</th><th class="center">CAREER</th><th class="center">INFO</th></tr>
+  <tr><th class="center">ID</th><th class="center">NAME</th><th class="center">CAREER</th><th class="center">EXP</th><th class="center">INFO</th></tr>
   <?php } ?>
   <?php foreach($data as $val){ ?>
       <tr>
