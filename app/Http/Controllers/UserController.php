@@ -92,8 +92,9 @@ class UserController extends Controller
     public function job(Request $request)
     {
       $data1 = $request::all();
+      $user_data = DB::table('employee')->where('number', $data1['number'])->get();
       $career_data = DB::table('career')->where('number', $data1['number'])->get();
-      return view('user.job',compact('data1'),['career' => $career_data]);
+      return view('user.job',compact('data1'),['data' => $user_data],['career' => $career_data]);
     }
 
     public function career(Request $request)
@@ -163,5 +164,12 @@ class UserController extends Controller
          "detail" => $detail, "type" => $type, "manpower" => $manpower, "persons" => $persons,
          "role" => $role, "process" => $process, "tools" => $tools]);
         return view('user.entry',compact('data1'));
+    }
+
+    public function exp(Request $request)
+    {
+      $data1 = $request::all();
+      $career_data = DB::table('career')->where('number', $data1['number'])->get();
+      return view('user.job',compact('data1'),['career' => $career_data]);
     }
 }

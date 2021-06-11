@@ -27,7 +27,16 @@
             @csrf
             <div style="margin-left:10%;margin-right:10%;">
               <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
-              <button style="width:100%;" type="submit" id="career" name="career">経歴</button>
+              <button style="width:100%;" type="submit" id="job" name="job">経歴</button>
+            </div>
+            </form>
+          </td>
+          <td>
+            <form action="/Sample/public/exp" method="post">
+            @csrf
+            <div style="margin-left:10%;margin-right:10%;">
+              <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
+              <button style="width:100%;" type="submit" id="exp" name="exp">経験</button>
             </div>
             </form>
           </td>
