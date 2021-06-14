@@ -31,7 +31,7 @@
             <?php foreach($industry as $val){ ?>
             <tr>
                 <td class="left"><?php echo $val->industry_name; ?></td>
-                <td class="left">　　年　　月</td>
+                <td class="left"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
             </tr>
             <?php } ?>
         </tbody>
