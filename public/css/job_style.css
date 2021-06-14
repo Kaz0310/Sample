@@ -17,6 +17,10 @@ th {
     border-color: black;
 }
 
+.noborder {
+    border: 0px none;
+}
+
 th.center {
     background-color: #362D79;
     text-align: center;

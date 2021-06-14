@@ -170,7 +170,7 @@ class UserController extends Controller
     {
       $data1 = $request::all();
       $user_data = DB::table('employee')->select('number','name','furigana')->where('number', $data1['number'])->first();
-      $career_data = DB::table('career')->where('number', $data1['number'])->get();
-      return view('user.exp',['data' => $user_data]);
+      $industry_data = DB::table('industry')->get();
+      return view('user.exp',['data' => $user_data],['industry' => $industry_data]);
     }
 }

@@ -20,6 +20,21 @@
             </tr>
         </tbody>
     </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <th class="center" scope="row" width="310">業種</th>
+                <th class="center" width="120">経験年月</th>
+            </tr>
+            <?php foreach($industry as $val){ ?>
+            <tr>
+                <td class="left"><?php echo $val->industry_name; ?></td>
+                <td class="left">　　年　　月</td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
     </div>
 <div>
 

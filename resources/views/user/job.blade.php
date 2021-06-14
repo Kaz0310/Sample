@@ -13,6 +13,7 @@
             <tr>
             <th class="left" scope="row" width="80">社員番号</th>
             <td class="left" width="150"><?php echo $data->number; ?></td>
+            <td class="noborder" width="30"></td>
             <th class="left" scope="row" width="80">氏名</th>
             <td class="left" width="150"><?php echo $data->name; ?></td>
             <td class="left" width="150"><?php echo $data->furigana; ?></td>
