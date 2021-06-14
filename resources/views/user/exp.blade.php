@@ -15,12 +15,13 @@
             <td class="left" width="150"><?php echo $data->number; ?></td>
             <td class="noborder" width="30"></td>
             <th class="left" scope="row" width="80">氏名</th>
-            <td class="left" width="150"><?php echo $data->name; ?></td>
-            <td class="left" width="150"><?php echo $data->furigana; ?></td>
+            <td class="left" width="250"><?php echo $data->name; ?></td>
+            <td class="left" width="250"><?php echo $data->furigana; ?></td>
             </tr>
         </tbody>
     </table>
     </br>
+    <?php echo $industry; ?>
     <table>
         <tbody>
             <tr>
@@ -28,10 +29,9 @@
                 <th class="center" width="120">経験年月</th>
             </tr>
             <?php foreach($industry as $val){ ?>
-                <?php echo $val; ?>
             <tr>
                 <td class="left"><?php echo $val->industry_name; ?></td>
-                <td class="left">　　年　　月</td>
+                <td class="left"><?php echo $val->experience.year; ?>年<?php echo $val->experience.month; ?>月</td>
             </tr>
             <?php } ?>
         </tbody>
