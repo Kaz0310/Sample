@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+    margin: 1px;
+}
+
+th {
+    background-color: #362D79;
+    text-align: left;
+    color: white;
+    border: solid 1px;/* 枠線指定 */
+    border-color: black;
+}
+
+th.center {
+    background-color: #362D79;
+    text-align: center;
+    color: white;
+    border: solid 1px;/* 枠線指定 */
+    border-color: black;
+}
+td {
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+}
+
+td.center {
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+    text-align: center;
+}
+
+td.left {
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+    text-align: left;
+    vertical-align: text-top;
+}
+
+td.right {
+    margin: auto;
+    border: solid 1px;/* 枠線指定 */
+    text-align: right;
+}
+
+textarea {
+    resize: none;
+}
