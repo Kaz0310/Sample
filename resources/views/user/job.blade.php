@@ -11,8 +11,11 @@
     <table>
         <tbody>
             <tr>
-            <th class="left" scope="row" width="120">社員番号</th>
+            <th class="left" scope="row" width="80">社員番号</th>
             <td class="left"><?php echo $data1['number']; ?></td>
+            <th class="left" scope="row" width="80">氏名</th>
+            <td class="left" width="150">氏名</td>
+            <td class="left" width="150">ふりがな</td>
             </tr>
         </tbody>
     </table>
