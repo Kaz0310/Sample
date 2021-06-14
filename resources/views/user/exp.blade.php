@@ -28,6 +28,7 @@
                 <th class="center" width="120">経験年月</th>
             </tr>
             <?php foreach($industry as $val){ ?>
+                <?php echo $val; ?>
             <tr>
                 <td class="left"><?php echo $val->industry_name; ?></td>
                 <td class="left">　　年　　月</td>
