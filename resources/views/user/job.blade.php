@@ -8,7 +8,7 @@
 <body>
     <h2>アルテクススキルシート</h2>
     <div>
-    <?php echo $data; ?>
+    <?php echo $data->name; ?>
     <table>
         <tbody>
             <tr>
