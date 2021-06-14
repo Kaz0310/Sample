@@ -170,7 +170,7 @@ class UserController extends Controller
     {
       $data1 = $request::all();
       $user_data = DB::table('employee')->select('number','name','furigana')->where('number', $data1['number'])->first();
-      $industry_data = DB::table('industry')->get();
+      $industry_data = DB::table('industry')->leftJoin('experience', 'code', '=', 'experience.industry_code')->get();
       return view('user.exp',['data' => $user_data],['industry' => $industry_data]);
     }
 }
