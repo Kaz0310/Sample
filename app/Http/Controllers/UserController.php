@@ -169,7 +169,8 @@ class UserController extends Controller
     public function exp(Request $request)
     {
       $data1 = $request::all();
+      $user_data = DB::table('employee')->select('number','name','furigana')->where('number', $data1['number'])->first();
       $career_data = DB::table('career')->where('number', $data1['number'])->get();
-      return view('user.job',compact('data1'),['career' => $career_data]);
+      return view('user.exp',['data' => $user_data]);
     }
 }
