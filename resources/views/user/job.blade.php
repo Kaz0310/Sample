@@ -8,12 +8,11 @@
 <body>
     <h2>アルテクススキルシート</h2>
     <div>
-    <?php echo $data; ?>
     <table>
         <tbody>
             <tr>
             <th class="left" scope="row" width="80">社員番号</th>
-            <td class="left"><?php echo $data1['number']; ?></td>
+            <td class="left" width="150">社員番号</td>
             <th class="left" scope="row" width="80">氏名</th>
             <td class="left" width="150">氏名</td>
             <td class="left" width="150">ふりがな</td>
@@ -24,7 +23,7 @@
     <h3>職務</h3>
     <form action="/Sample/public/career" method="post">
     @csrf
-       <input type="hidden" name="number" id="number_id" value="<?php echo $data1['number']; ?>" />
+       <input type="hidden" name="number" id="number_id" value="1" />
        <button style="width:60px;" type="submit" id="career" name="career">✚追加</button>
     </form>
 <form action="/Sample/public/entry" method="post">
