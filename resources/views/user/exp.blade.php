@@ -21,7 +21,6 @@
         </tbody>
     </table>
     </br>
-    <?php echo $industry; ?>
     <table>
         <tbody>
             <tr>
