@@ -50,7 +50,7 @@
                     <th class="center" scope="row" width="310">職種：Web・アプリ・クリエイティブ</th>
                     <th class="center" width="120">経験年月</th>
                 </tr>
-                <?php foreach($job as $val){ ?>
+                <?php foreach($occupation as $val){ ?>
                 <tr>
                     <td class="left"><?php echo $val->industry_name; ?></td>
                     @if(isset( $val->year ) && isset( $val->month ))

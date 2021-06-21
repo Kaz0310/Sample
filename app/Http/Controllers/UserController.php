@@ -173,6 +173,9 @@ class UserController extends Controller
       //$industry_data = DB::table('industry')->leftJoin('experience', 'code', '=', 'experience.industry_code')->where('number', $data1['number'])->orWhereNull('number')->orderBy('code', 'asc')->get();
       $subSQL = DB::table('experience')->where('number', '=', ':number')->toSQL();
       $industry_data = DB::table('industry')->leftJoinSub($subSQL, 'exp', 'code', 'exp.industry_code')->orderBy('code', 'asc')->setBindings([':number'=>$data1['number']])->get();
-      return view('user.exp',['data' => $user_data,'industry' => $industry_data,'job' => $industry_data]);
+
+      $subSQL = DB::table('work_experience')->where('number', '=', ':number')->toSQL();
+      $occupation_data = DB::table('occupation')->leftJoinSub($subSQL, 'work', 'code', 'work.occupation_code')->orderBy('code', 'asc')->setBindings([':number'=>$data1['number']])->get();
+      return view('user.exp',['data' => $user_data,'industry' => $industry_data,'occupation' => $occupation_data]);
     }
 }
