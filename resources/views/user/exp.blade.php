@@ -23,29 +23,33 @@
     </br>
     <table>
         <tbody>
-        <td class="center" width="440"></td>
-        <td class="center" width="440"></td>
+        <td class="noborder" width="440">
+            <table>
+                <tbody>
+                <tr>
+                    <th class="center" scope="row" width="310">業種</th>
+                    <th class="center" width="120">経験年月</th>
+                </tr>
+                <?php foreach($industry as $val){ ?>
+                <tr>
+                    <td class="left"><?php echo $val->industry_name; ?></td>
+                    @if(isset( $val->year ) && isset( $val->month ))
+                    <td class="right"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
+                    @else
+                    <td class="right"> 年 月</td>
+                    @endif
+                </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </td>
+        <td class="noborder" width="440">
+        
+        </td>
         </tbody>
     </table>
     </br>
-    <table>
-        <tbody>
-            <tr>
-                <th class="center" scope="row" width="310">業種</th>
-                <th class="center" width="120">経験年月</th>
-            </tr>
-            <?php foreach($industry as $val){ ?>
-            <tr>
-                <td class="left"><?php echo $val->industry_name; ?></td>
-                @if(isset( $val->year ) && isset( $val->month ))
-                <td class="right"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
-                @else
-                <td class="right"> 年 月</td>
-                @endif
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+    
     </div>
 <div>
 
