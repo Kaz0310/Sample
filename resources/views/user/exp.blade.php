@@ -52,7 +52,7 @@
                 </tr>
                 <?php foreach($occupation as $val){ ?>
                 <tr>
-                    <td class="left"><?php echo $val->industry_name; ?></td>
+                    <td class="left"><?php echo $val->occupation_name; ?></td>
                     @if(isset( $val->year ) && isset( $val->month ))
                     <td class="right"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
                     @else
