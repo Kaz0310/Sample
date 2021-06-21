@@ -15,6 +15,7 @@ th {
 
 .noborder {
     border: 0px none;
+    vertical-align: text-top;
 }
 
 th.center {
