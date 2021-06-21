@@ -44,7 +44,24 @@
             </table>
         </td>
         <td class="noborder" width="440">
-        
+            <table>
+                <tbody>
+                <tr>
+                    <th class="center" scope="row" width="310">職種：Web・アプリ・クリエイティブ</th>
+                    <th class="center" width="120">経験年月</th>
+                </tr>
+                <?php foreach($job as $val){ ?>
+                <tr>
+                    <td class="left"><?php echo $val->industry_name; ?></td>
+                    @if(isset( $val->year ) && isset( $val->month ))
+                    <td class="right"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
+                    @else
+                    <td class="right"> 年 月</td>
+                    @endif
+                </tr>
+                <?php } ?>
+                </tbody>
+            </table>
         </td>
         </tbody>
     </table>
