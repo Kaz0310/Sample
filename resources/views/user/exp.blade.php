@@ -15,8 +15,8 @@
             <td class="left" width="170"><?php echo $data->number; ?></td>
             <td class="noborder" width="10"></td>
             <th class="left" scope="row" width="80">氏名</th>
-            <td class="left" width="250"><?php echo $data->name; ?></td>
-            <td class="left" width="250"><?php echo $data->furigana; ?></td>
+            <td class="left" width="300"><?php echo $data->name; ?></td>
+            <td class="left" width="300"><?php echo $data->furigana; ?></td>
             </tr>
         </tbody>
     </table>
@@ -27,7 +27,7 @@
             <table>
                 <tbody>
                 <tr>
-                    <th class="center" scope="row" width="320">業種</th>
+                    <th class="center" scope="row" width="350">業種</th>
                     <th class="center" width="120">経験年月</th>
                 </tr>
                 <?php foreach($industry as $val){ ?>
@@ -47,7 +47,7 @@
             <table>
                 <tbody>
                 <tr>
-                    <th class="center" scope="row" width="320">職種：Web・アプリ・クリエイティブ</th>
+                    <th class="center" scope="row" width="350">職種：Web・アプリ・クリエイティブ</th>
                     <th class="center" width="120">経験年月</th>
                 </tr>
                 <?php foreach($occupation as $val){ ?>
