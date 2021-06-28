@@ -15,8 +15,8 @@
             <td class="left" width="170"><?php echo $data->number; ?></td>
             <td class="noborder" width="10"></td>
             <th class="left" scope="row" width="80">氏名</th>
-            <td class="left" width="300"><?php echo $data->name; ?></td>
-            <td class="left" width="300"><?php echo $data->furigana; ?></td>
+            <td class="left" width="280"><?php echo $data->name; ?></td>
+            <td class="left" width="280"><?php echo $data->furigana; ?></td>
             </tr>
         </tbody>
     </table>
