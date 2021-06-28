@@ -12,7 +12,7 @@
 <label><?php echo count($data); ?>件</Label>
 <table>
   <?php if(count($data) > 0){ ?>
-  <tr><th class="center">ID</th><th class="center">NAME</th><th class="center">CAREER</th><th class="center">EXP</th><th class="center">INFO</th></tr>
+  <tr><th class="center">ID</th><th class="center">NAME</th><th class="center">CAREER</th><th class="center">EXP</th><th class="center">SKILL</th><th class="center">INFO</th></tr>
   <?php } ?>
   <?php foreach($data as $val){ ?>
       <tr>
@@ -33,6 +33,15 @@
           </td>
           <td>
             <form action="/Sample/public/exp" method="post">
+            @csrf
+            <div style="margin-left:10%;margin-right:10%;">
+              <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
+              <button style="width:100%;" type="submit" id="exp" name="exp">経験</button>
+            </div>
+            </form>
+          </td>
+          <td>
+            <form action="/Sample/public/skill" method="post">
             @csrf
             <div style="margin-left:10%;margin-right:10%;">
               <input type="hidden" name="number" id="number_id" value="<?php echo $val->number; ?>" />
