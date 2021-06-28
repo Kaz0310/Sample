@@ -178,4 +178,11 @@ class UserController extends Controller
       $occupation_data = DB::table('occupation')->leftJoinSub($subSQL, 'work', 'code', 'work.occupation_code')->orderBy('code', 'asc')->setBindings([':number'=>$data1['number']])->get();
       return view('user.exp',['data' => $user_data,'industry' => $industry_data,'occupation' => $occupation_data]);
     }
+
+    public function skill(Request $request)
+    {
+      $data1 = $request::all();
+      $user_data = DB::table('employee')->select('number','name','furigana')->where('number', $data1['number'])->first();
+      return view('user.skill',['data' => $user_data]);
+    }
 }

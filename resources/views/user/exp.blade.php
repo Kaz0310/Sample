@@ -23,7 +23,7 @@
     </br>
     <table>
         <tbody>
-        <td class="noborder" width="440">
+        <td class="noborder" width="480">
             <table>
                 <tbody>
                 <tr>
@@ -43,7 +43,7 @@
                 </tbody>
             </table>
         </td>
-        <td class="noborder" width="440">
+        <td class="noborder" width="480">
             <table>
                 <tbody>
                 <tr>
