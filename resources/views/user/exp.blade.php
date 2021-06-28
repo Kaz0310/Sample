@@ -27,7 +27,7 @@
             <table>
                 <tbody>
                 <tr>
-                    <th class="center" scope="row" width="310">業種</th>
+                    <th class="center" scope="row" width="320">業種</th>
                     <th class="center" width="120">経験年月</th>
                 </tr>
                 <?php foreach($industry as $val){ ?>
@@ -47,7 +47,7 @@
             <table>
                 <tbody>
                 <tr>
-                    <th class="center" scope="row" width="310">職種：Web・アプリ・クリエイティブ</th>
+                    <th class="center" scope="row" width="320">職種：Web・アプリ・クリエイティブ</th>
                     <th class="center" width="120">経験年月</th>
                 </tr>
                 <?php foreach($occupation as $val){ ?>
