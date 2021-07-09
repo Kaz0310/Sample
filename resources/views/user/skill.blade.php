@@ -62,6 +62,9 @@
                 </tr>
                 <?php foreach($business as $val){ ?>
                 <tr>
+                    <td class="left"><?php echo $val->business_name; ?></td>
+                </tr>
+                <tr>
                     <td class="left"><?php echo $val->business_class_name; ?></td>
                     @if(isset( $val->year ) && isset( $val->month ) && isset( $val->level ))
                     <td class="right"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
