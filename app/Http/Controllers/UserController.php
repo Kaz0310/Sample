@@ -188,7 +188,7 @@ class UserController extends Controller
       $business_data = DB::table('business_class')->leftJoinSub($subSQL, 'exp', function ($join) {
         $join->on('business_class.business_code', '=', 'exp.business_code')
         ->where('business_class.business_class_code', '=', 'exp.business_class_code');
-      })->orderBy('code', 'asc')->setBindings([':number'=>$data1['number']])->get();
+      })->orderBy('business_class.business_code', 'asc')->setBindings([':number'=>$data1['number']])->get();
 
       return view('user.skill',['data' => $user_data, 'business' => $business_data]);
     }
