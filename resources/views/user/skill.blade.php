@@ -60,10 +60,14 @@
                     <th class="center" width="120">経験年月</th>
                     <th class="center" width="120">レベル</th>
                 </tr>
+                <?php $var = 0; ?>
                 <?php foreach($business as $val){ ?>
+                @if($var != $val->business_code)
                 <tr>
-                    <td class="left"><?php echo $val->business_name; ?></td>
+                    <td class="left" colspan="3"><?php echo $val->business_name; ?></td>
                 </tr>
+                <?php $var = $val->business_code; ?>
+                @endif
                 <tr>
                     <td class="left"><?php echo $val->business_class_name; ?></td>
                     @if(isset( $val->year ) && isset( $val->month ) && isset( $val->level ))
