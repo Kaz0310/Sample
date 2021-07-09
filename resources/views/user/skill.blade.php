@@ -53,6 +53,7 @@
                 </tbody>
             </table>
             </br>
+            <?php echo $business; ?>
             <table>
                 <tbody>
                 <tr>
