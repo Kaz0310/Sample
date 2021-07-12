@@ -21,6 +21,8 @@
         </tbody>
     </table>
     </br>
+    <h3>レベルの説明</h3>
+    </br>
     <table>
         <tbody>
         <td class="noborder" width="550">
