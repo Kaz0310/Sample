@@ -190,6 +190,12 @@ class UserController extends Controller
         $join->on('business_class.business_class_code', '=', 'exp.experience_class_code');
       })->orderBy('business_class.business_code', 'asc')->orderBy('business_class.business_class_code', 'asc')->setBindings([':number'=>$data1['number']])->get();
 
-      return view('user.skill',['data' => $user_data, 'business' => $business_data]);
+      $subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
+      $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->leftJoinSub($subSQL, 'exp', function ($join) {
+        $join->on('technology_class.technology_code', '=', 'exp.experience_code');
+        $join->on('technology_class.technology_class_code', '=', 'exp.experience_class_code');
+      })->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->setBindings([':number'=>$data1['number']])->get();
+
+      return view('user.skill',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
 }
