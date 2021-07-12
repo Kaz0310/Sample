@@ -13,13 +13,6 @@ th {
     border-color: black;
 }
 
-th.blue {
-    background-color: #2204FC1A;
-    text-align: left;
-    border: solid 1px;/* 枠線指定 */
-    border-color: black;
-}
-
 .noborder {
     border: 0px none;
     vertical-align: text-top;
@@ -32,6 +25,15 @@ th.center {
     border: solid 1px;/* 枠線指定 */
     border-color: black;
 }
+
+th.blue {
+    background-color: #2204FC1A;
+    text-align: left;
+    color: black;
+    border: solid 1px;/* 枠線指定 */
+    border-color: black;
+}
+
 td {
     margin: auto;
     border: solid 1px;/* 枠線指定 */
