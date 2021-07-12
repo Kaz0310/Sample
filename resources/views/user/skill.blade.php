@@ -20,9 +20,7 @@
             </tr>
         </tbody>
     </table>
-    </br>
-    <h3>レベルの説明</h3>
-    </br>
+    <div>レベルの説明</div>
     <table>
         <tbody>
         <td class="noborder" width="550">
