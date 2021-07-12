@@ -94,7 +94,6 @@
 
                 </tbody>
             </table>
-            <?php echo $technology; ?>
         </td>
         </tbody>
     </table>
