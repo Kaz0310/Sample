@@ -21,7 +21,7 @@
         </tbody>
     </table>
     </br>
-    <h4>レベルの説明</h4>
+    <div style='font-weight: bold;'>レベルの説明</div>
     <table>
         <tbody>
         <td class="noborder" width="550">
@@ -98,12 +98,7 @@
         </tbody>
     </table>
     </br>
-    
     </div>
-<div>
-
-</div>
-
 </form>
 </body>
 
