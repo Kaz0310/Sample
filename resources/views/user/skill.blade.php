@@ -91,7 +91,25 @@
                     <th class="center" width="120">経験年月</th>
                     <th class="center" width="120">レベル</th>
                 </tr>
-
+                <?php $var = 0; ?>
+                <?php foreach($technology as $val){ ?>
+                @if($var != $val->technology_code)
+                <tr>
+                    <td class="blue" colspan="3"><?php echo $val->technology_name; ?></td>
+                </tr>
+                <?php $var = $val->technology_code; ?>
+                @endif
+                <tr>
+                    <td class="left"><?php echo $val->technology_class_name; ?></td>
+                    @if(isset( $val->year ) && isset( $val->month ) && isset( $val->level ))
+                    <td class="right"><?php echo $val->year; ?>年<?php echo $val->month; ?>月</td>
+                    <td class="right">レベル<?php echo $val->level; ?></td>
+                    @else
+                    <td class="right"> 年 月</td>
+                    <td class="right">レベル0</td>
+                    @endif
+                </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </td>
