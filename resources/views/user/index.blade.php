@@ -7,7 +7,12 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-  <button type="button" onclick="location.href='/Sample/public/create'">ユーザー作成</button>
+  <div style='padding:30px;'>
+    <button type="button" onclick="location.href='/Sample/public/create'">ユーザー作成</button>
+  </div>
+  <div style='padding:30px;'>
+    <button type="button" onclick="location.href='/Sample/public/search'">ユーザー検索</button>
+  </div>
 </br></br>
 <label><?php echo count($data); ?>件</Label>
 <table>
