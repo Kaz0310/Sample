@@ -198,4 +198,17 @@ class UserController extends Controller
 
       return view('user.skill',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
+
+    public function search(Request $request)
+    {
+      $data1 = $request::all();
+
+      $subSQL = DB::table('business_experience')->where('number', '=', ':number')->toSQL();
+      $business_data = DB::table('business')->Join('business_class','code','=','business_code')->orderBy('business_class.business_code', 'asc')->orderBy('business_class.business_class_code', 'asc')->get();
+
+      $subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
+      $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
+
+      return view('user.search',['business' => $business_data, 'technology' => $technology_data]);
+    }
 }
