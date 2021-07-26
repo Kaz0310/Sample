@@ -39,12 +39,12 @@
                 @if($var != $val->business_code)
                 <tr>
                     <td class="blue" colspan="3"><?php echo $val->business_name; ?></td>
-                    <input type="hidden" name="business_code" id="business_code_id" value="<?php echo $val->business_code; ?>" />
                 </tr>
                 <?php $var = $val->business_code; ?>
                 @endif
                 <tr>
                     <td class="left"><?php echo $val->business_class_name; ?></td>
+                    <input type="hidden" name="business_code" id="business_code_id" value="<?php echo $var; ?>" />
                     <input type="hidden" name="business_class_code" id="business_class_code_id" value="<?php echo $val->business_class_code; ?>" />
                     <td class="right"> 年 月</td>
                     <td class="right">{{Form::select('level', ['4' => 'レベル４', '3' => 'レベル３', '2' => 'レベル２', '1' => 'レベル１', '0' => 'レベル０'], '0')}}</td>
@@ -96,12 +96,12 @@
                 @if($var != $val->technology_code)
                 <tr>
                     <td class="blue" colspan="3"><?php echo $val->technology_name; ?></td>
-                    <input type="hidden" name="technology_code" id="technology_code_id" value="<?php echo $val->technology_code; ?>" />
                 </tr>
                 <?php $var = $val->technology_code; ?>
                 @endif
                 <tr>
                     <td class="left"><?php echo $val->technology_class_name; ?></td>
+                    <input type="hidden" name="technology_code" id="technology_code_id" value="<?php echo $var; ?>" />
                     <input type="hidden" name="technology_class_code" id="technology_class_code_id" value="<?php echo $val->technology_class_code; ?>" />
                     <td class="right"> 年 月</td>
                     <td class="right">{{Form::select('level', ['4' => 'レベル４', '3' => 'レベル３', '2' => 'レベル２', '1' => 'レベル１', '0' => 'レベル０'], '0')}}</td>
