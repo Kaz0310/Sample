@@ -19,7 +19,7 @@
                     <th class="center" width="135">終業日</th>
                 </tr>
                 <tr>
-                    <td class="left"></td>
+                    <td class="left">　</td>
                     <td class="center"></td>
                     <td class="center"></td>
                     <td class="center"></td>
