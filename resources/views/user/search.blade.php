@@ -13,6 +13,23 @@
             <table>
                 <tbody>
                 <tr>
+                    <th class="center" scope="row" width="210">氏名</th>
+                    <th class="center" width="85">年齢</th>
+                    <th class="center" width="110">就業状態</th>
+                    <th class="center" width="135">終業日</th>
+                </tr>
+                <tr>
+                    <td class="left"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                </tbody>
+            </table>
+            </br>
+            <table>
+                <tbody>
+                <tr>
                     <th class="center" scope="row" width="300">業務スキル</th>
                     <th class="center" width="120">経験年月</th>
                     <th class="center" width="120">レベル</th>
