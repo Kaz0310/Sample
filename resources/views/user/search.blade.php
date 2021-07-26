@@ -7,7 +7,6 @@
 </head>
 <body>
     <h2>アルテクススキルシート</h2>
-    <div style='font-weight: bold;'>レベルの説明</div>
     <table>
         <tbody>
         <td class="noborder" width="550">
@@ -36,6 +35,7 @@
             </table>
         </td>
         <td class="noborder" width="550">
+        <div style='font-weight: bold;'>レベルの説明</div>
         <table>
                 <tbody>
                 <tr>
