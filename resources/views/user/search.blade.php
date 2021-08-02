@@ -50,7 +50,6 @@
                 @endif
                 <tr>
                     <td class="left"><?php echo $val->business_class_name; ?></td>
-                    <input type="hidden" name="business_<?php echo $val->business_code; ?>_<?php echo $val->business_class_code; ?>" id="business_code_id" value="<?php echo $val->business_code; ?>-<?php echo $val->business_class_code; ?>" />
                     <td class="right"> 年 月</td>
                     <td class="right">
                     <select name="business_level_<?php echo $val->business_code; ?>_<?php echo $val->business_class_code; ?>">
@@ -61,6 +60,7 @@
                         <option value="0" selected="selected">レベル０</option>
                     </select>
                     </td>
+                    <input type="hidden" name="business_<?php echo $val->business_code; ?>_<?php echo $val->business_class_code; ?>" id="business_code_id" value="<?php echo $val->business_code; ?>-<?php echo $val->business_class_code; ?>" />
                 </tr>
                 <?php } ?>
                 </tbody>
@@ -114,7 +114,6 @@
                 @endif
                 <tr>
                     <td class="left"><?php echo $val->technology_class_name; ?></td>
-                    <input type="hidden" name="technology_<?php echo $val->technology_code; ?>_<?php echo $val->technology_class_code; ?>" id="technology_code_id" value="<?php echo $val->technology_code; ?>-<?php echo $val->technology_class_code; ?>" />
                     <td class="right"> 年 月</td>
                     <td class="right">
                     <select name="technology_level_<?php echo $val->technology_code; ?>_<?php echo $val->technology_class_code; ?>">
@@ -125,6 +124,7 @@
                         <option value="0" selected="selected">レベル０</option>
                     </select>
                     </td>
+                    <input type="hidden" name="technology_<?php echo $val->technology_code; ?>_<?php echo $val->technology_class_code; ?>" id="technology_code_id" value="<?php echo $val->technology_code; ?>-<?php echo $val->technology_class_code; ?>" />
                 </tr>
                 <?php } ?>
                 </tbody>
