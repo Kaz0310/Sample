@@ -29,6 +29,7 @@ Route::post('/entry', 'UserController@entry');
 Route::post('/exp', 'UserController@exp');
 Route::post('/skill', 'UserController@skill');
 Route::get('/search', 'UserController@search');
+Route::post('/result', 'UserController@result');
 
 Route::get('/sample','SampleController@index');
 Route::get('/sample/{id}','SampleController@show')->where('id', '[0-9]+');
