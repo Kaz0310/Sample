@@ -104,7 +104,7 @@
                     <input type="hidden" name="technology_code" id="technology_code_id" value="<?php echo $var; ?>" />
                     <input type="hidden" name="technology_class_code" id="technology_class_code_id" value="<?php echo $val->technology_class_code; ?>" />
                     <td class="right"> 年 月</td>
-                    <td class="right">{{Form::select('level', ['4' => 'レベル４', '3' => 'レベル３', '2' => 'レベル２', '1' => 'レベル１', '0' => 'レベル０'], '0')}}</td>
+                    <td class="right">{{Form::select('level_<?php echo $var; ?>_<?php echo $val->technology_class_code; ?>" />', ['4' => 'レベル４', '3' => 'レベル３', '2' => 'レベル２', '1' => 'レベル１', '0' => 'レベル０'], '0')}}</td>
                 </tr>
                 <?php } ?>
                 </tbody>
