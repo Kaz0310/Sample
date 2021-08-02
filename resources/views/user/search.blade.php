@@ -10,6 +10,9 @@
     <form action="/Sample/public/result" method="post">
     @csrf
     <button type="submit" id="search" name="search">検索開始</button>
+    @if(isset($data))
+    <?php echo $data; ?>
+    @endif
     <table>
         <tbody>
         <td class="noborder" width="550">
