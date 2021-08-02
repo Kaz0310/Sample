@@ -47,7 +47,7 @@
                     <input type="hidden" name="business_code" id="business_code_id" value="<?php echo $val->business_code; ?>" />
                     <input type="hidden" name="business_class_code" id="business_class_code_id" value="<?php echo $val->business_class_code; ?>" />
                     <td class="right"> 年 月</td>
-                    <td class="right">{{Form::select('level', ['4' => 'レベル４', '3' => 'レベル３', '2' => 'レベル２', '1' => 'レベル１', '0' => 'レベル０'], '0')}}</td>
+                    <td class="right">{{Form::select("level", ['4' => 'レベル４', '3' => 'レベル３', '2' => 'レベル２', '1' => 'レベル１', '0' => 'レベル０'], '0')}}</td>
                 </tr>
                 <?php } ?>
                 </tbody>
