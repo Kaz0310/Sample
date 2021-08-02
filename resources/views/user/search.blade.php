@@ -7,6 +7,9 @@
 </head>
 <body>
     <h2>アルテクススキルシート</h2>
+    <form action="/Sample/public/search" method="post">
+    @csrf
+    <button type="submit" id="search" name="search">検索開始</button>
     <table>
         <tbody>
         <td class="noborder" width="550">
