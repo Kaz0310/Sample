@@ -222,6 +222,8 @@ class UserController extends Controller
       $subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
 
-      return view('user.search',['data' => $data1, 'business' => $business_data, 'technology' => $technology_data]);
+      $user_data = DB::table('business_experience')->where('experience_code', '=', '1')->where('experience_class_code', '=', '7')->where('level', '>', '2')->get();
+
+      return view('user.search',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
 }
