@@ -203,10 +203,10 @@ class UserController extends Controller
     {
       $data1 = $request::all();
 
-      $subSQL = DB::table('business_experience')->where('number', '=', ':number')->toSQL();
+      //$subSQL = DB::table('business_experience')->where('number', '=', ':number')->toSQL();
       $business_data = DB::table('business')->Join('business_class','code','=','business_code')->orderBy('business_class.business_code', 'asc')->orderBy('business_class.business_class_code', 'asc')->get();
 
-      $subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
+      //$subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
 
       return view('user.search',['business' => $business_data, 'technology' => $technology_data]);
@@ -223,7 +223,7 @@ class UserController extends Controller
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
 
       $subSQL = DB::table('business_experience')->where('experience_code', '=', '1')->where('experience_class_code', '=', '7')->where('level', '>', '2')->toSQL();
-      $user_data = DB::table('employee')->leftJoinSub($subSQL, 'bus', 'employee.number', 'bus.number')->get();
+      $user_data = DB::table('employee')->leftJoinSub($subSQL, 'bus', 'number', 'bus.num')->get();
 
       return view('user.search',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
