@@ -26,9 +26,9 @@
                 </tr>
                 <tr>
                 @if(isset($data))
-                <?php foreach($business as $val){ ?>
-                    <td class="left">$val->name</td>
-                    <td class="center">$val->age</td>
+                <?php foreach($data as $val){ ?>
+                    <td class="left"><?php echo $val->name; ?></td>
+                    <td class="center"><?php echo $val->age; ?></td>
                     <td class="center"></td>
                     <td class="center"></td>
                 <?php } ?>
