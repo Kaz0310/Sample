@@ -223,7 +223,7 @@ class UserController extends Controller
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
 
       $subSQL = DB::table('business_experience')->where('experience_code', '=', ':experience_code')->where('experience_class_code', '=', ':experience_class_code')->where('level', '>', ':level')->toSQL();
-      $user_data = DB::table('employee')->select('employee.number','name')->JoinSub($subSQL, 'bus', 'employee.number', 'bus.number')->setBindings([':experience_code'=>1, ':experience_class_code'=>7, ':level'=>2])->get();
+      $user_data = DB::table('employee')->select('employee.number','name','age')->JoinSub($subSQL, 'bus', 'employee.number', 'bus.number')->setBindings([':experience_code'=>1, ':experience_class_code'=>7, ':level'=>2])->get();
 
       return view('user.search',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }

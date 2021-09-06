@@ -25,10 +25,14 @@
                     <th class="center" width="135">終業日</th>
                 </tr>
                 <tr>
-                    <td class="left">　</td>
+                @if(isset($data))
+                <?php foreach($business as $val){ ?>
+                    <td class="left">$val->name</td>
+                    <td class="center">$val->age</td>
                     <td class="center"></td>
                     <td class="center"></td>
-                    <td class="center"></td>
+                <?php } ?>
+                @endif
                 </tr>
                 </tbody>
             </table>
