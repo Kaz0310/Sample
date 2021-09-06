@@ -21,16 +21,16 @@
                     <th class="center" width="110">就業状態</th>
                     <th class="center" width="135">終業日</th>
                 </tr>
-                <tr>
                 @if(isset($data))
                 <?php foreach($data as $val){ ?>
+                    <tr>
                     <td class="left"><?php echo $val->name; ?></td>
                     <td class="center"><?php echo $val->age; ?></td>
                     <td class="center"></td>
                     <td class="center"></td>
+                    </tr>
                 <?php } ?>
                 @endif
-                </tr>
                 </tbody>
             </table>
             </br>
