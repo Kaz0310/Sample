@@ -225,8 +225,9 @@ class UserController extends Controller
       $subSQL = DB::table('business_experience')->where('experience_code', '=', ':experience_code')->where('experience_class_code', '=', ':experience_class_code')->where('level', '>=', ':level')->toSQL();
       $mainSQL = DB::table('employee')->select('employee.number','name','age')->JoinSub($subSQL, 'bus', 'employee.number', 'bus.number')->setBindings([':experience_code'=>1, ':experience_class_code'=>7, ':level'=>3]);
 
-      //$subSQL = DB::table('business_experience')->where('experience_code', '=', ':experience_code')->where('experience_class_code', '=', ':experience_class_code')->where('level', '>=', ':level')->toSQL();
-      //$mainSQL = $mainSQL->JoinSub($subSQL, 'bus', 'employee.number', 'bus.number')->setBindings([':experience_code'=>2, ':experience_class_code'=>3, ':level'=>1]);
+      $subSQL = DB::table('business_experience')->where('experience_code', '=', ':experience_code_2')->where('experience_class_code', '=', ':experience_class_code_2')->where('level', '>=', ':level_2')->toSQL();
+      $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_2', 'employee.number', 'bus_2.number')->setBindings([':experience_code_2'=>2, ':experience_class_code_2'=>3, ':level_2'=>1]);
+      
       $user_data = $mainSQL->get();
 
       return view('user.search',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
