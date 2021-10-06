@@ -64,7 +64,8 @@
                         <option value="0" selected="selected">レベル０</option>
                     </select>
                     </td>
-                    <input type="hidden" name="business_<?php echo $val->business_code; ?>_<?php echo $val->business_class_code; ?>" id="business_code_id" value="<?php echo $val->business_code; ?>-<?php echo $val->business_class_code; ?>" />
+                    <input type="hidden" name="business_code_<?php echo $val->business_code; ?>_<?php echo $val->business_class_code; ?>" id="business_code_id" value="<?php echo $val->business_code; ?>" />
+                    <input type="hidden" name="business_class_code_<?php echo $val->business_code; ?>_<?php echo $val->business_class_code; ?>" id="business_class_code_id" value="<?php echo $val->business_class_code; ?>" />
                 </tr>
                 <?php } ?>
                 </tbody>
@@ -128,7 +129,8 @@
                         <option value="0" selected="selected">レベル０</option>
                     </select>
                     </td>
-                    <input type="hidden" name="technology_<?php echo $val->technology_code; ?>_<?php echo $val->technology_class_code; ?>" id="technology_code_id" value="<?php echo $val->technology_code; ?>-<?php echo $val->technology_class_code; ?>" />
+                    <input type="hidden" name="technology_code<?php echo $val->technology_code; ?>_<?php echo $val->technology_class_code; ?>" id="technology_code_id" value="<?php echo $val->technology_code; ?>" />
+                    <input type="hidden" name="technology_class_code<?php echo $val->technology_code; ?>_<?php echo $val->technology_class_code; ?>" id="technology_class_code_id" value="<?php echo $val->technology_class_code; ?>" />
                 </tr>
                 <?php } ?>
                 </tbody>
