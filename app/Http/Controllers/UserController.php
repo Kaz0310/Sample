@@ -214,7 +214,7 @@ class UserController extends Controller
 
     public function result(Request $request)
     {
-      $data1 = $request::all();
+      $data1 = $request->except(['_token']);
 
       //$subSQL = DB::table('business_experience')->where('number', '=', ':number')->toSQL();
       $business_data = DB::table('business')->Join('business_class','code','=','business_code')->orderBy('business_class.business_code', 'asc')->orderBy('business_class.business_class_code', 'asc')->get();
