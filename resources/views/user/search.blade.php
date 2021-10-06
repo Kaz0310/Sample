@@ -19,6 +19,8 @@
     <?php var_dump(count($business)); ?>
     </br>
     <?php var_dump(count($technology)); ?>
+    </br>
+    <?php var_dump($binding_arr); ?>
     @endif
     <table>
         <tbody>

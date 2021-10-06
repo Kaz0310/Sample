@@ -226,6 +226,7 @@ class UserController extends Controller
 
       $business_arr = array();
       $technology_arr = array();
+      $binding_arr = array();
 
       for($i = 0; $i < count($business_data); $i++){
         $keys= array_keys($data1[$i]);
@@ -237,7 +238,7 @@ class UserController extends Controller
           }
         }
       }
-      
+
       for($j = count($business_data); $j < count($data1); $j++){
         $keys= array_keys($data1[$j]);
         foreach ( $keys as $key ) {
@@ -246,6 +247,17 @@ class UserController extends Controller
               array_push($technology_arr, $data1[$j]);
             }
           }
+        }
+      }
+
+      foreach ( $business_arr as $business ) {
+        foreach ( $business as $bus ) {
+          array_push($binding_arr, $bus);
+        }
+      }
+      foreach ( $technology_arr as $technology ) {
+        foreach ( $technology as $tec ) {
+          array_push($binding_arr, $tec);
         }
       }
 
@@ -265,6 +277,6 @@ class UserController extends Controller
 
       $user_data = $mainSQL->get();
 
-      return view('user.search',['data' => $data1, 'business_arr' => $business_arr, 'technology_arr' => $technology_arr, 'user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
+      return view('user.search',['data' => $data1, 'business_arr' => $business_arr, 'technology_arr' => $technology_arr, 'binding_arr' => $binding_arr, 'user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
 }
