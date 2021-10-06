@@ -11,7 +11,12 @@
     @csrf
     <button type="submit" id="search" name="search">検索開始</button>
     @if(isset($data))
+    </br>
     <?php var_dump($data); ?>
+    </br>
+    <?php var_dump(count($business)); ?>
+    </br>
+    <?php var_dump(count($technology)); ?>
     @endif
     <table>
         <tbody>
