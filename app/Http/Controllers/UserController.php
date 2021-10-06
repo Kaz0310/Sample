@@ -229,7 +229,15 @@ class UserController extends Controller
 
 
       for($i = 0; $i < count($business_data); $i++){
-        array_push($business_arr, $data1[$i]);
+        $keys= array_keys($data1[$i]);
+        foreach ( $keys as $key ) {
+          if ( preg_match( '/business_level_*/', $key ) ) {
+            if(intval($data1[$i][$key]) > 0){
+              array_push($business_arr, $data1[$i]);
+            }
+          }
+        }
+        
       }
       for($j = count($business_data); $j < count($data1); $j++){
         array_push($technology_arr, $data1[$j]);
