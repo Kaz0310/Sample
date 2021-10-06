@@ -10,6 +10,9 @@
     <form action="/Sample/public/result" method="post">
     @csrf
     <button type="submit" id="search" name="search">検索開始</button>
+    @if(isset($data))
+    var_dump($data);
+    @endif
     <table>
         <tbody>
         <td class="noborder" width="550">
@@ -21,8 +24,8 @@
                     <th class="center" width="110">就業状態</th>
                     <th class="center" width="135">終業日</th>
                 </tr>
-                @if(isset($data))
-                <?php foreach($data as $val){ ?>
+                @if(isset($user))
+                <?php foreach($user as $val){ ?>
                     <tr>
                     <td class="left"><?php echo $val->name; ?></td>
                     <td class="center"><?php echo $val->age; ?></td>

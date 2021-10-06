@@ -238,6 +238,6 @@ class UserController extends Controller
 
       $user_data = $mainSQL->get();
 
-      return view('user.search',['data' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
+      return view('user.search',['data' => $data1, 'user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
 }
