@@ -227,7 +227,6 @@ class UserController extends Controller
       $business_arr = array();
       $technology_arr = array();
 
-
       for($i = 0; $i < count($business_data); $i++){
         $keys= array_keys($data1[$i]);
         foreach ( $keys as $key ) {
@@ -237,10 +236,17 @@ class UserController extends Controller
             }
           }
         }
-        
       }
+      
       for($j = count($business_data); $j < count($data1); $j++){
-        array_push($technology_arr, $data1[$j]);
+        $keys= array_keys($data1[$j]);
+        foreach ( $keys as $key ) {
+          if ( preg_match( '/technology_level_*/', $key ) ) {
+            if(intval($data1[$j][$key]) > 0){
+              array_push($technology_arr, $data1[$j]);
+            }
+          }
+        }
       }
 
       $mainSQL = DB::table('employee')->select('number','name','age');
