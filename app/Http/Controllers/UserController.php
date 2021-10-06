@@ -224,6 +224,17 @@ class UserController extends Controller
       //$subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
 
+      $business_arr = array();
+      $technology_arr = array();
+
+
+      for($i = 0; $i < count($business_data); $i++){
+        array_push($business_arr, data1[$i]);
+      }
+      for($j = count($business_data); $j < count(data1); $j++){
+        array_push($technology_arr, data1[$j]);
+      }
+
       $mainSQL = DB::table('employee')->select('number','name','age');
 
       $subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code')->where('experience_class_code', '=', 'experience_class_code')->where('level', '>=', 'level')->toSQL();
@@ -240,6 +251,6 @@ class UserController extends Controller
 
       $user_data = $mainSQL->get();
 
-      return view('user.search',['data' => $data1, 'user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
+      return view('user.search',['data' => $data1, 'business_arr' => $business_arr, 'technology_arr' => $technology_arr, 'user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
 }
