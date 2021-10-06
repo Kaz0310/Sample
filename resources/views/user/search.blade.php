@@ -11,7 +11,7 @@
     @csrf
     <button type="submit" id="search" name="search">検索開始</button>
     @if(isset($data))
-    var_dump($data);
+    <?php var_dump($data); ?>
     @endif
     <table>
         <tbody>
