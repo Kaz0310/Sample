@@ -267,7 +267,8 @@ class UserController extends Controller
 
       $subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code')->where('experience_class_code', '=', 'experience_class_code')->where('level', '>=', 'level')->toSQL();
 
-      $mainSQL = $mainSQL->JoinSub($subSQL, 'bus', 'number', 'bus.employee_id');
+      $cnt = 1;
+      $mainSQL = $mainSQL->JoinSub($subSQL, 'bus'.$cnt, 'number', 'bus'.$cnt.'.employee_id');
 
       $subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code_2')->where('experience_class_code', '=', 'experience_class_code_2')->where('level', '>=', 'level_2')->toSQL();
 
