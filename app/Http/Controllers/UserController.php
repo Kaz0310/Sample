@@ -253,13 +253,13 @@ class UserController extends Controller
       foreach ( $business_arr as $business ) {
         $keys= array_keys($business);
         foreach ( $keys as $key ) {
-          array_push($binding_arr, $business[$key]);
+          $binding_arr += array($key => $business[$key]);
         }
       }
       foreach ( $technology_arr as $technology ) {
         $keys= array_keys($technology);
         foreach ( $keys as $key ) {
-          array_push($binding_arr, $technology[$key]);
+          $binding_arr += array($key => $technology[$key]);
         }
       }
 
