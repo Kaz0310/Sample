@@ -229,10 +229,10 @@ class UserController extends Controller
 
 
       for($i = 0; $i < count($business_data); $i++){
-        array_push($business_arr, data1[$i]);
+        array_push($business_arr, $data1[$i]);
       }
-      for($j = count($business_data); $j < count(data1); $j++){
-        array_push($technology_arr, data1[$j]);
+      for($j = count($business_data); $j < count($data1); $j++){
+        array_push($technology_arr, $data1[$j]);
       }
 
       $mainSQL = DB::table('employee')->select('number','name','age');
