@@ -226,11 +226,11 @@ class UserController extends Controller
 
       $mainSQL = DB::table('employee')->select('number','name','age')->JoinSub($subSQL, 'bus', 'number', 'bus.employee_id');
 
-      $subSQL = DB::table('business_experience')->where('experience_code', '=', ':experience_code_2')->where('experience_class_code', '=', ':experience_class_code_2')->where('level', '>=', ':level_2')->toSQL();
+      $subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code_2')->where('experience_class_code', '=', 'experience_class_code_2')->where('level', '>=', 'level_2')->toSQL();
 
       $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_2', 'number', 'bus_2.employee_id');
 
-      $bindings = [':experience_code'=>1, ':experience_class_code'=>7, ':level'=>3, ':experience_code_2'=>2, ':experience_class_code_2'=>3, ':level_2'=>1];
+      $bindings = [':experience_code'=>1, ':experience_class_code'=>7, ':level'=>3, 'experience_code_2'=>2, 'experience_class_code_2'=>3, 'level_2'=>1];
       
       $mainSQL = $mainSQL->setBindings($bindings);
 
