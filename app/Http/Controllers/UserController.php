@@ -218,10 +218,8 @@ class UserController extends Controller
 
       $data1 = array_chunk($data1, 3, true);
 
-      //$subSQL = DB::table('business_experience')->where('number', '=', ':number')->toSQL();
       $business_data = DB::table('business')->Join('business_class','code','=','business_code')->orderBy('business_class.business_code', 'asc')->orderBy('business_class.business_class_code', 'asc')->get();
 
-      //$subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->orderBy('technology_class.technology_code', 'asc')->orderBy('technology_class.technology_class_code', 'asc')->get();
 
       $business_arr = array();
@@ -302,21 +300,10 @@ class UserController extends Controller
         $cnt++;
       }
 
-      //$cnt = 1;
-      //$subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code')->where('experience_class_code', '=', 'experience_class_code')->where('level', '>=', 'level')->toSQL();
-
-      //$mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
-
-      //$subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code_2')->where('experience_class_code', '=', 'experience_class_code_2')->where('level', '>=', 'level_2')->toSQL();
-
-      //$mainSQL = $mainSQL->JoinSub($subSQL, 'bus_2', 'number', 'bus_2.employee_id');
-
-      //$bindings = ['experience_code'=>1, 'experience_class_code'=>7, 'level'=>3, 'experience_code_2'=>2, 'experience_class_code_2'=>3, 'level_2'=>1];
-      
       $mainSQL = $mainSQL->setBindings($binding_arr);
 
       $user_data = $mainSQL->get();
 
-      return view('user.search',['data' => $data1, 'business_arr' => $business_arr, 'technology_arr' => $technology_arr, 'binding_arr' => $binding_arr, 'user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
+      return view('user.search',['user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
     }
 }

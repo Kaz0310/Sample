@@ -10,14 +10,6 @@
     <form action="/Sample/public/result" method="post">
     @csrf
     <button type="submit" id="search" name="search">検索開始</button>
-    @if(isset($data))
-    </br>
-    <?php var_dump($business_arr); ?>
-    </br>
-    <?php var_dump($technology_arr); ?>
-    </br>
-    <?php var_dump($binding_arr); ?>
-    @endif
     <table>
         <tbody>
         <td class="noborder" width="550">
