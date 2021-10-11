@@ -184,13 +184,13 @@ class UserController extends Controller
       $data1 = $request::all();
       $user_data = DB::table('employee')->select('number','name','furigana')->where('number', $data1['number'])->first();
 
-      $subSQL = DB::table('business_experience')->where('number', '=', ':number')->toSQL();
+      $subSQL = DB::table('business_experience')->where('employee_id', '=', ':number')->toSQL();
       $business_data = DB::table('business')->Join('business_class','code','=','business_code')->leftJoinSub($subSQL, 'exp', function ($join) {
         $join->on('business_class.business_code', '=', 'exp.experience_code');
         $join->on('business_class.business_class_code', '=', 'exp.experience_class_code');
       })->orderBy('business_class.business_code', 'asc')->orderBy('business_class.business_class_code', 'asc')->setBindings([':number'=>$data1['number']])->get();
 
-      $subSQL = DB::table('technology_experience')->where('number', '=', ':number')->toSQL();
+      $subSQL = DB::table('technology_experience')->where('employee_id', '=', ':number')->toSQL();
       $technology_data = DB::table('technology')->Join('technology_class','code','=','technology_code')->leftJoinSub($subSQL, 'exp', function ($join) {
         $join->on('technology_class.technology_code', '=', 'exp.experience_code');
         $join->on('technology_class.technology_class_code', '=', 'exp.experience_class_code');
