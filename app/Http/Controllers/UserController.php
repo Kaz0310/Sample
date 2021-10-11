@@ -260,7 +260,7 @@ class UserController extends Controller
           $binding_arr += array($key => intval($business[$key]));
           switch($cnt){
             case 0:
-            $subSQL = $subSQL->where('level', '=', $key);
+            $subSQL = $subSQL->where('level', '>=', $key);
             break;
             case 1:
             $subSQL = $subSQL->where('experience_code', '=', $key);
@@ -269,8 +269,9 @@ class UserController extends Controller
             $subSQL = $subSQL->where('experience_class_code', '=', $key);
             break;
           }
-          $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
           $cnt++;
+          $subSQL = $subSQL->toSQL();
+          $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
         }
       }
       foreach ( $technology_arr as $technology ) {
