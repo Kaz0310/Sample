@@ -276,11 +276,30 @@ class UserController extends Controller
         $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
         $cnt++;
       }
+
+      $cnt = 0;
       foreach ( $technology_arr as $technology ) {
+        $subSQL = DB::table('technology_experience');
         $keys= array_keys($technology);
+        $keycnt = 0;
         foreach ( $keys as $key ) {
           $binding_arr += array($key => intval($technology[$key]));
+          switch($keycnt){
+            case 0:
+            $subSQL = $subSQL->where('level', '>=', $key);
+            break;
+            case 1:
+            $subSQL = $subSQL->where('experience_code', '=', $key);
+            break;
+            case 2:
+            $subSQL = $subSQL->where('experience_class_code', '=', $key);
+            break;
+          }
+          $keycnt++;
         }
+        $subSQL = $subSQL->toSQL();
+        $mainSQL = $mainSQL->JoinSub($subSQL, 'tec_'.$cnt, 'number', 'tec_'.$cnt.'.employee_id');
+        $cnt++;
       }
 
       //$cnt = 1;
