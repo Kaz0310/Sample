@@ -252,13 +252,14 @@ class UserController extends Controller
 
       $mainSQL = DB::table('employee')->select('number','name','age');
 
+      $cnt = 0;
       foreach ( $business_arr as $business ) {
         $subSQL = DB::table('business_experience');
         $keys= array_keys($business);
-        $cnt = 0;
+        $keycnt = 0;
         foreach ( $keys as $key ) {
           $binding_arr += array($key => intval($business[$key]));
-          switch($cnt){
+          switch($keycnt){
             case 0:
             $subSQL = $subSQL->where('level', '>=', $key);
             break;
@@ -269,10 +270,11 @@ class UserController extends Controller
             $subSQL = $subSQL->where('experience_class_code', '=', $key);
             break;
           }
-          $cnt++;
-          $subSQL = $subSQL->toSQL();
-          $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
+          $keycnt++;
         }
+        $subSQL = $subSQL->toSQL();
+        $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
+        $cnt++;
       }
       foreach ( $technology_arr as $technology ) {
         $keys= array_keys($technology);
