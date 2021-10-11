@@ -258,7 +258,7 @@ class UserController extends Controller
         $cnt = 0;
         foreach ( $keys as $key ) {
           $binding_arr += array($key => intval($business[$key]));
-          switch(cnt){
+          switch($cnt){
             case 0:
             $subSQL = $subSQL->where('level', '=', $key);
             break;
