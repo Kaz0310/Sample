@@ -250,10 +250,27 @@ class UserController extends Controller
         }
       }
 
+      $mainSQL = DB::table('employee')->select('number','name','age');
+
       foreach ( $business_arr as $business ) {
+        $subSQL = DB::table('business_experience');
         $keys= array_keys($business);
+        $cnt = 0;
         foreach ( $keys as $key ) {
           $binding_arr += array($key => intval($business[$key]));
+          switch(cnt){
+            case 0:
+            $subSQL = $subSQL->where('level', '=', $key);
+            break;
+            case 1:
+            $subSQL = $subSQL->where('experience_code', '=', $key);
+            break;
+            case 2:
+            $subSQL = $subSQL->where('experience_class_code', '=', $key);
+            break;
+          }
+          $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
+          $cnt++;
         }
       }
       foreach ( $technology_arr as $technology ) {
@@ -263,20 +280,18 @@ class UserController extends Controller
         }
       }
 
-      $mainSQL = DB::table('employee')->select('number','name','age');
+      //$cnt = 1;
+      //$subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code')->where('experience_class_code', '=', 'experience_class_code')->where('level', '>=', 'level')->toSQL();
 
-      $subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code')->where('experience_class_code', '=', 'experience_class_code')->where('level', '>=', 'level')->toSQL();
+      //$mainSQL = $mainSQL->JoinSub($subSQL, 'bus_'.$cnt, 'number', 'bus_'.$cnt.'.employee_id');
 
-      $cnt = 1;
-      $mainSQL = $mainSQL->JoinSub($subSQL, 'bus'.$cnt, 'number', 'bus'.$cnt.'.employee_id');
+      //$subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code_2')->where('experience_class_code', '=', 'experience_class_code_2')->where('level', '>=', 'level_2')->toSQL();
 
-      $subSQL = DB::table('business_experience')->where('experience_code', '=', 'experience_code_2')->where('experience_class_code', '=', 'experience_class_code_2')->where('level', '>=', 'level_2')->toSQL();
+      //$mainSQL = $mainSQL->JoinSub($subSQL, 'bus_2', 'number', 'bus_2.employee_id');
 
-      $mainSQL = $mainSQL->JoinSub($subSQL, 'bus_2', 'number', 'bus_2.employee_id');
-
-      $bindings = ['experience_code'=>1, 'experience_class_code'=>7, 'level'=>3, 'experience_code_2'=>2, 'experience_class_code_2'=>3, 'level_2'=>1];
+      //$bindings = ['experience_code'=>1, 'experience_class_code'=>7, 'level'=>3, 'experience_code_2'=>2, 'experience_class_code_2'=>3, 'level_2'=>1];
       
-      $mainSQL = $mainSQL->setBindings($bindings);
+      $mainSQL = $mainSQL->setBindings($binding_arr);
 
       $user_data = $mainSQL->get();
 
