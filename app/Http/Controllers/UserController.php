@@ -301,7 +301,6 @@ class UserController extends Controller
       }
 
       $mainSQL = $mainSQL->setBindings($binding_arr);
-
       $user_data = $mainSQL->get();
 
       return view('user.search',['user' => $user_data, 'business' => $business_data, 'technology' => $technology_data]);
